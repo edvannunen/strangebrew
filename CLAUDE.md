@@ -77,5 +77,5 @@ Confirmed working: index, `styles.css`, `data.json`, images, `vendor/chart/chart
 
 ## Still open / to decide later
 
-- [ ] Add a Strange Brew tile to `../Home`'s landing page (separate follow-up, done in that project)
+- [x] Add a Strange Brew tile to `../Home`'s landing page — done on the `add-strangebrew-tile` branch, links to `/strangebrew/`
 - [ ] Part 3 of the family plan (shared login gate) will eventually need to cover this app too once built
