@@ -27,12 +27,8 @@
       </div>
     </div>
     <nav class="tabs" role="tablist" aria-label="Dashboard paginas">
-      <button class="tab-btn active" id="tab-cijfers" role="tab" aria-selected="true" aria-controls="page-cijfers">
-        <span class="tab-num">01</span> Cijfers
-      </button>
-      <button class="tab-btn" id="tab-tijdlijn" role="tab" aria-selected="false" aria-controls="page-tijdlijn">
-        <span class="tab-num">02</span> Tijdlijn
-      </button>
+      <button class="tab-btn active" id="tab-cijfers" role="tab" aria-selected="true" aria-controls="page-cijfers">Cijfers</button>
+      <button class="tab-btn" id="tab-tijdlijn" role="tab" aria-selected="false" aria-controls="page-tijdlijn">Tijdlijn</button>
     </nav>
   </div>
 </header>
@@ -147,12 +143,10 @@
 
 <!-- DETAILKAART / MODAL -->
 <div class="modal-overlay" id="modal-overlay" hidden>
-  <button class="modal-nav modal-nav-prev" id="modal-prev" aria-label="Vorig brouwsel">&#10094;</button>
   <div class="modal-card" id="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <button class="modal-close" id="modal-close" aria-label="Sluiten">&times;</button>
     <div class="modal-content" id="modal-content"><!-- gevuld via JS --></div>
   </div>
-  <button class="modal-nav modal-nav-next" id="modal-next" aria-label="Volgend brouwsel">&#10095;</button>
 </div>
 
 <script src="vendor/chart/chart.umd.min.js"></script>

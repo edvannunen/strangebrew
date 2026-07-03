@@ -458,8 +458,10 @@ let currentModalIndex = -1;
 function initModal(){
   const overlay = document.getElementById("modal-overlay");
   document.getElementById("modal-close").addEventListener("click", closeModal);
-  document.getElementById("modal-prev").addEventListener("click", () => showModalAtIndex(currentModalIndex - 1));
-  document.getElementById("modal-next").addEventListener("click", () => showModalAtIndex(currentModalIndex + 1));
+  document.getElementById("modal-content").addEventListener("click", (e) => {
+    if (e.target.closest(".ticket-nav-prev")) showModalAtIndex(currentModalIndex - 1);
+    if (e.target.closest(".ticket-nav-next")) showModalAtIndex(currentModalIndex + 1);
+  });
   overlay.addEventListener("click", (e) => { if (e.target === overlay) closeModal(); });
   document.addEventListener("keydown", (e) => {
     if (document.getElementById("modal-overlay").hidden) return;
@@ -471,15 +473,10 @@ function initModal(){
 function closeModal(){
   document.getElementById("modal-overlay").hidden = true;
 }
-function updateModalNavButtons(){
-  document.getElementById("modal-prev").disabled = currentModalIndex <= 0;
-  document.getElementById("modal-next").disabled = currentModalIndex >= RECIPES.length - 1;
-}
 function showModalAtIndex(idx){
   if (idx < 0 || idx >= RECIPES.length) return;
   currentModalIndex = idx;
   renderModalContent(RECIPES[idx]);
-  updateModalNavButtons();
   document.getElementById("modal-card").scrollTop = 0;
 }
 function openModalForBatch(batchNum){
@@ -487,7 +484,6 @@ function openModalForBatch(batchNum){
   if (idx === -1) return;
   currentModalIndex = idx;
   renderModalContent(RECIPES[idx]);
-  updateModalNavButtons();
   document.getElementById("modal-overlay").hidden = false;
 }
 function renderModalContent(r){
@@ -527,6 +523,10 @@ function renderModalContent(r){
         <div class="ticket-batch">Batch #${String(r.batch).padStart(2,"0")}</div>
         <div class="ticket-title">${esc(r.name)}</div>
         <div class="ticket-style">${esc(r.style)}</div>
+      </div>
+      <div class="ticket-nav">
+        <button class="ticket-nav-btn ticket-nav-prev" ${currentModalIndex <= 0 ? "disabled" : ""} aria-label="Vorig brouwsel">&#10094;</button>
+        <button class="ticket-nav-btn ticket-nav-next" ${currentModalIndex >= RECIPES.length - 1 ? "disabled" : ""} aria-label="Volgend brouwsel">&#10095;</button>
       </div>
     </div>
     <div class="ticket-body">
