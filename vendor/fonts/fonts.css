@@ -1,0 +1,88 @@
+/* big-shoulders-display-latin-600-normal */
+@font-face {
+  font-family: 'Big Shoulders Display';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url(files/big-shoulders-display-latin-600-normal.woff2) format('woff2');
+}
+/* big-shoulders-display-latin-700-normal */
+@font-face {
+  font-family: 'Big Shoulders Display';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(files/big-shoulders-display-latin-700-normal.woff2) format('woff2');
+}
+/* big-shoulders-display-latin-800-normal */
+@font-face {
+  font-family: 'Big Shoulders Display';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
+  src: url(files/big-shoulders-display-latin-800-normal.woff2) format('woff2');
+}
+/* big-shoulders-display-latin-900-normal */
+@font-face {
+  font-family: 'Big Shoulders Display';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+  src: url(files/big-shoulders-display-latin-900-normal.woff2) format('woff2');
+}
+/* work-sans-latin-400-normal */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(files/work-sans-latin-400-normal.woff2) format('woff2');
+}
+/* work-sans-latin-500-normal */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url(files/work-sans-latin-500-normal.woff2) format('woff2');
+}
+/* work-sans-latin-600-normal */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url(files/work-sans-latin-600-normal.woff2) format('woff2');
+}
+/* work-sans-latin-700-normal */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(files/work-sans-latin-700-normal.woff2) format('woff2');
+}
+/* ibm-plex-mono-latin-400-normal */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(files/ibm-plex-mono-latin-400-normal.woff2) format('woff2');
+}
+/* ibm-plex-mono-latin-500-normal */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url(files/ibm-plex-mono-latin-500-normal.woff2) format('woff2');
+}
+/* ibm-plex-mono-latin-600-normal */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url(files/ibm-plex-mono-latin-600-normal.woff2) format('woff2');
+}

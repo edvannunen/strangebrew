@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strange Brew — Brouwdashboard</title>
+<meta name="description" content="Overzicht en tijdlijn van alle Strange Brew brouwsels sinds 2017.">
+<base href="/strangebrew/">
+
+<link rel="stylesheet" href="vendor/fonts/fonts.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grain-overlay" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <img src="images/logo-creme.png" alt="Strange Brew logo" class="brand-logo">
+      <div class="brand-text">
+        <span class="brand-name">STRANGE BREW</span>
+        <span class="brand-tag">brouwdashboard</span>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Dashboard paginas">
+      <button class="tab-btn active" id="tab-cijfers" role="tab" aria-selected="true" aria-controls="page-cijfers">
+        <span class="tab-num">01</span> Cijfers
+      </button>
+      <button class="tab-btn" id="tab-tijdlijn" role="tab" aria-selected="false" aria-controls="page-tijdlijn">
+        <span class="tab-num">02</span> Tijdlijn
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- PAGINA 1: CIJFERS -->
+  <section id="page-cijfers" class="page active" role="tabpanel" aria-labelledby="tab-cijfers">
+
+    <div class="hero hero-cijfers">
+      <div class="hero-text">
+        <p class="hero-eyebrow">— brouwstatistieken —</p>
+        <h1 class="hero-title"><span id="hero-count">--</span> brouwsels<br>sinds <span id="hero-firstyear">----</span></h1>
+      </div>
+      <img src="images/logo-creme.png" alt="Strange Brew logo" class="hero-logo">
+    </div>
+
+    <div class="stats-strip" id="stats-strip">
+      <!-- gevuld via JS -->
+    </div>
+
+    <div class="ledger-grid">
+
+      <article class="panel panel-wide" id="panel-stijl">
+        <header class="panel-head">
+          <h2>Bierstijlen</h2>
+          <p class="panel-note">Verdeling van alle brouwsels over BJCP-stijlen</p>
+        </header>
+        <div class="panel-body">
+          <canvas id="chart-stijl" role="img" aria-label="Staafdiagram met de verdeling van bierstijlen"></canvas>
+        </div>
+      </article>
+
+      <article class="panel" id="panel-abv">
+        <header class="panel-head">
+          <h2>Alcohol&nbsp;%</h2>
+          <p class="panel-note">Geschat ABV per brouwsel</p>
+        </header>
+        <div class="panel-body">
+          <canvas id="chart-abv" role="img" aria-label="Histogram van alcoholpercentages"></canvas>
+        </div>
+      </article>
+
+      <article class="panel" id="panel-batch">
+        <header class="panel-head">
+          <h2>Batchgrootte</h2>
+          <p class="panel-note">Hoeveel liter er per keer werd gebrouwen</p>
+        </header>
+        <div class="panel-body">
+          <canvas id="chart-batch" role="img" aria-label="Histogram van batchgroottes in liters"></canvas>
+        </div>
+      </article>
+
+      <article class="panel panel-wide" id="panel-hop">
+        <header class="panel-head">
+          <h2>Hop van keuze</h2>
+          <p class="panel-note">Meest gebruikte hopsoorten, op aantal brouwsels en totaalgewicht</p>
+        </header>
+        <div class="panel-body">
+          <canvas id="chart-hop" role="img" aria-label="Staafdiagram met de meest gebruikte hopsoorten"></canvas>
+        </div>
+      </article>
+
+      <article class="panel" id="panel-gist">
+        <header class="panel-head">
+          <h2>Gist in het vat</h2>
+          <p class="panel-note">Meest gebruikte giststammen</p>
+        </header>
+        <div class="panel-body">
+          <ul class="yeast-list" id="yeast-list"><!-- gevuld via JS --></ul>
+        </div>
+      </article>
+
+    </div>
+
+    <article class="panel color-panel">
+      <header class="panel-head">
+        <h2>Kleurspreiding — EBC</h2>
+        <p class="panel-note">Elk bolletje is één brouwsel, geplaatst op zijn eigen kleurwaarde. Tik of hover voor details.</p>
+      </header>
+      <div class="ebc-scale-wrap">
+        <div class="ebc-scale" id="ebc-scale"></div>
+        <div class="ebc-scale-labels">
+          <span>bleek</span><span>goud</span><span>amber</span><span>bruin</span><span>zwart</span>
+        </div>
+        <div class="ebc-dots" id="ebc-dots"></div>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- PAGINA 2: TIJDLIJN -->
+  <section id="page-tijdlijn" class="page" role="tabpanel" aria-labelledby="tab-tijdlijn" hidden>
+
+    <div class="hero hero-small">
+      <p class="hero-eyebrow">— de muur van etiketten —</p>
+      <h1 class="hero-title">Tijdlijn van brouwsels</h1>
+      <p class="hero-sub">Chronologisch, van het eerste flesje tot de laatste batch. Tik op een etiket voor het volledige recept.</p>
+    </div>
+
+    <div class="timeline" id="timeline"><!-- gevuld via JS --></div>
+
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span>STRANGE BREW — thuisbrouwlogboek</span>
+  <span class="footer-sep">·</span>
+  <a href="tools/beheer.html" class="footer-link">nieuw brouwsel toevoegen</a>
+</footer>
+
+<!-- DETAILKAART / MODAL -->
+<div class="modal-overlay" id="modal-overlay" hidden>
+  <div class="modal-card" id="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" aria-label="Sluiten">&times;</button>
+    <div class="modal-content" id="modal-content"><!-- gevuld via JS --></div>
+  </div>
+</div>
+
+<script src="vendor/chart/chart.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

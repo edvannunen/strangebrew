@@ -1,0 +1,5379 @@
+[
+ {
+  "batch": 1,
+  "name": "A Shot In The Dark IPA",
+  "full_name": "#01 A Shot In The Dark IPA",
+  "date_display": "03-03-2017",
+  "date_iso": "2017-03-03",
+  "style": "Saison",
+  "batch_size_display": "10.00 L",
+  "batch_size_l": 10.0,
+  "abv": 6.0,
+  "ebc": 12.0,
+  "ibu": 25.0,
+  "hops": [
+   {
+    "name": "East Kent Goldings",
+    "grams": 12,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Sorachi Ace",
+    "grams": 35,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 25,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pilsmout",
+    "type": "Grain",
+    "grams": 1300
+   },
+   {
+    "name": "Tarwemout",
+    "type": "Grain",
+    "grams": 600
+   },
+   {
+    "name": "Biscuitmout",
+    "type": "Grain",
+    "grams": 100
+   }
+  ],
+  "yeasts": [
+   "Wyeast 3711 French Saison / Lallemand Belle Saison"
+  ],
+  "source_file": "handmatig (brouwbeesten.nl - Mannenliefde/Oedipus Saison)",
+  "labels": [
+   "batch01 - A Shot In The Dark IPA.jpg"
+  ]
+ },
+ {
+  "batch": 2,
+  "name": "If I Should Fall From Grace With Hop",
+  "full_name": "#02 If I Should Fall From Grace With Hop",
+  "date_display": "13-03-2017",
+  "date_iso": "2017-03-13",
+  "style": "American IPA",
+  "batch_size_display": "5.00 L",
+  "batch_size_l": 5.0,
+  "abv": 6.5,
+  "ebc": 13.1,
+  "ibu": 62.9,
+  "hops": [
+   {
+    "name": "Centennial",
+    "grams": 23.6,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Cascade",
+    "grams": 6.2,
+    "uses": [
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Malt, Maris Otter",
+    "type": "Grain",
+    "grams": 1198.3
+   },
+   {
+    "name": "Vienna Malt (Weyermann)",
+    "type": "Grain",
+    "grams": 199.7
+   },
+   {
+    "name": "Cara-Pils/Dextrine",
+    "type": "Grain",
+    "grams": 49.9
+   },
+   {
+    "name": "Caramel/Crystal Malt - 20L",
+    "type": "Grain",
+    "grams": 49.9
+   }
+  ],
+  "yeasts": [
+   "Denny's Favorite 50"
+  ],
+  "source_file": "Caramel/Crystal Malt - 20L",
+  "labels": [
+   "batch02 - If I Should Fall From Grace With Hop.jpg"
+  ]
+ },
+ {
+  "batch": 3,
+  "name": "Vincent Black Lightning",
+  "full_name": "#03 Vincent Black Lightning",
+  "date_display": "13-03-2017",
+  "date_iso": "2017-03-13",
+  "style": "Dry Stout",
+  "batch_size_display": "5.00 L",
+  "batch_size_l": 5.0,
+  "abv": 5.6,
+  "ebc": 73.9,
+  "ibu": 54.8,
+  "hops": [
+   {
+    "name": "Goldings, East Kent",
+    "grams": 11.8,
+    "uses": [
+     "First Wort"
+    ]
+   },
+   {
+    "name": "Cascade",
+    "grams": 6.0,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Malt (2 Row) UK",
+    "type": "Grain",
+    "grams": 600.0
+   },
+   {
+    "name": "Barley, Flaked",
+    "type": "Grain",
+    "grams": 243.3
+   },
+   {
+    "name": "Black Barley (Stout)",
+    "type": "Grain",
+    "grams": 80.0
+   },
+   {
+    "name": "Carared",
+    "type": "Grain",
+    "grams": 50.0
+   },
+   {
+    "name": "Chocolate Malt",
+    "type": "Grain",
+    "grams": 50.0
+   },
+   {
+    "name": "Munich Malt",
+    "type": "Grain",
+    "grams": 50.0
+   },
+   {
+    "name": "Sugar, Table (Sucrose)",
+    "type": "Sugar",
+    "grams": 110.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Sugar, Table (Sucrose)",
+  "labels": [
+   "batch03 - Vincent Black Lightning.jpg"
+  ]
+ },
+ {
+  "batch": 4,
+  "name": "Tropical Hot Dog Night",
+  "full_name": "#04 Tropical Hot Dog Night",
+  "date_display": "20-03-2017",
+  "date_iso": "2017-03-20",
+  "style": "Imperial IPA",
+  "batch_size_display": "5.00 L",
+  "batch_size_l": 5.0,
+  "abv": 10.0,
+  "ebc": 14.3,
+  "ibu": 75.7,
+  "hops": [
+   {
+    "name": "Galena",
+    "grams": 5.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 39.2,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Amarillo",
+    "grams": 9.3,
+    "uses": [
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Malt (2 Row) US",
+    "type": "Grain",
+    "grams": 1600.0
+   },
+   {
+    "name": "Cara-Pils/Dextrine",
+    "type": "Grain",
+    "grams": 103.4
+   },
+   {
+    "name": "Carared",
+    "type": "Grain",
+    "grams": 60.0
+   },
+   {
+    "name": "Munich Malt",
+    "type": "Grain",
+    "grams": 60.0
+   },
+   {
+    "name": "White Wheat Malt",
+    "type": "Grain",
+    "grams": 44.4
+   },
+   {
+    "name": "Honey Malt",
+    "type": "Grain",
+    "grams": 30.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Honey Malt",
+  "labels": [
+   "batch04 Tropical Hot Dog Night.jpg"
+  ]
+ },
+ {
+  "batch": 5,
+  "name": "I Heard it through the Grapefruit",
+  "full_name": "#05 I Heard it through the Grapefruit",
+  "date_display": "22-03-2017",
+  "date_iso": "2017-03-22",
+  "style": "American Pale Ale",
+  "batch_size_display": "5.00 L",
+  "batch_size_l": 5.0,
+  "abv": 8.1,
+  "ebc": 14.7,
+  "ibu": 74.2,
+  "hops": [
+   {
+    "name": "Galena",
+    "grams": 4.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 11.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Amarillo",
+    "grams": 17.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Malt (2 Row) US",
+    "type": "Grain",
+    "grams": 1200.0
+   },
+   {
+    "name": "Munich Malt",
+    "type": "Grain",
+    "grams": 200.0
+   },
+   {
+    "name": "Carared",
+    "type": "Grain",
+    "grams": 100.0
+   },
+   {
+    "name": "Sugar, Table (Sucrose)",
+    "type": "Sugar",
+    "grams": 50.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Sugar, Table (Sucrose)",
+  "labels": [
+   "batch05 I Heard It Through The Grapefruit.jpg"
+  ]
+ },
+ {
+  "batch": 6,
+  "name": "Time of the Season",
+  "full_name": "#06 Time of the Season",
+  "date_display": "25-03-2017",
+  "date_iso": "2017-03-25",
+  "style": "Saison",
+  "batch_size_display": "7.00 L",
+  "batch_size_l": 7.0,
+  "abv": 6.2,
+  "ebc": 10.8,
+  "ibu": 31.7,
+  "hops": [
+   {
+    "name": "East Kent Goldings (EKG)",
+    "grams": 8.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Sorachi Ace",
+    "grams": 19.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 11.0,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Malt, Maris Otter",
+    "type": "Grain",
+    "grams": 1100.0
+   },
+   {
+    "name": "White Wheat Malt",
+    "type": "Grain",
+    "grams": 400.0
+   },
+   {
+    "name": "Biscuit Malt",
+    "type": "Grain",
+    "grams": 58.3
+   }
+  ],
+  "yeasts": [
+   "French Saison"
+  ],
+  "source_file": "Biscuit Malt",
+  "labels": [
+   "batch06 Time of the Season.jpg"
+  ]
+ },
+ {
+  "batch": 7,
+  "name": "Here Comes The Summer",
+  "full_name": "#07 Here Comes The Summer",
+  "date_display": "30-03-2017",
+  "date_iso": "2017-03-30",
+  "style": "American Pale Ale",
+  "batch_size_display": "10.00 L",
+  "batch_size_l": 10.0,
+  "abv": 6.1,
+  "ebc": 13.6,
+  "ibu": 33.9,
+  "hops": [
+   {
+    "name": "Amarillo",
+    "grams": 31.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Cascade",
+    "grams": 12.0,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Malt (2 Row) US",
+    "type": "Grain",
+    "grams": 2000.0
+   },
+   {
+    "name": "Munich Malt",
+    "type": "Grain",
+    "grams": 350.0
+   },
+   {
+    "name": "Carared",
+    "type": "Grain",
+    "grams": 200.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Carared",
+  "labels": [
+   "batch07 Here Comes The Summer.jpg"
+  ]
+ },
+ {
+  "batch": 8,
+  "name": "White Wedding",
+  "full_name": "#08 White Wedding",
+  "date_display": "04-04-2017",
+  "date_iso": "2017-04-04",
+  "style": "Witbier",
+  "batch_size_display": "9.00 L",
+  "batch_size_l": 9.0,
+  "abv": 5.0,
+  "ebc": 8.6,
+  "ibu": 15.5,
+  "hops": [
+   {
+    "name": "Challenger",
+    "grams": 15.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Saaz",
+    "grams": 9.0,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Malt (2 Row) UK",
+    "type": "Grain",
+    "grams": 900.0
+   },
+   {
+    "name": "White Wheat Malt",
+    "type": "Grain",
+    "grams": 800.0
+   },
+   {
+    "name": "Barley, Flaked (gerstvlokken)",
+    "type": "Grain",
+    "grams": 200.0
+   },
+   {
+    "name": "Cara-Pils/Dextrine",
+    "type": "Grain",
+    "grams": 90.0
+   }
+  ],
+  "yeasts": [
+   "Belgian Wit II"
+  ],
+  "source_file": "Cara-Pils/Dextrine",
+  "labels": [
+   "batch08 White Wedding.jpg"
+  ]
+ },
+ {
+  "batch": 9,
+  "name": "Dance Little CItra",
+  "full_name": "#09 Dance Little CItra",
+  "date_display": "10-04-2017",
+  "date_iso": "2017-04-10",
+  "style": "American IPA",
+  "batch_size_display": "9.00 L",
+  "batch_size_l": 9.0,
+  "abv": 5.3,
+  "ebc": 12.9,
+  "ibu": 46.4,
+  "hops": [
+   {
+    "name": "Columbus (Tomahawk)",
+    "grams": 11.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Cascade",
+    "grams": 12.0,
+    "uses": [
+     "Aroma",
+     "Boil"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 25.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Amarillo",
+    "grams": 13.0,
+    "uses": [
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Malt (2 Row) US",
+    "type": "Grain",
+    "grams": 1800.0
+   },
+   {
+    "name": "Carared",
+    "type": "Grain",
+    "grams": 250.0
+   },
+   {
+    "name": "Biscuit Malt",
+    "type": "Grain",
+    "grams": 100.5
+   },
+   {
+    "name": "Munich Malt - 10L",
+    "type": "Grain",
+    "grams": 0.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Munich Malt - 10L",
+  "labels": [
+   "batch09 Dance Little Citra.jpg"
+  ]
+ },
+ {
+  "batch": 10,
+  "name": "Die Rote Rosamunde",
+  "full_name": "#10 Die Rote Rosamunde",
+  "date_display": "15-04-2017",
+  "date_iso": "2017-04-15",
+  "style": "Irish Red Ale",
+  "batch_size_display": "9.00 L",
+  "batch_size_l": 9.0,
+  "abv": 5.0,
+  "ebc": 25.7,
+  "ibu": 21.5,
+  "hops": [
+   {
+    "name": "Columbus (Tomahawk)",
+    "grams": 5.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Willamette",
+    "grams": 18.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Amarillo",
+    "grams": 10.0,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Malt (2 Row), NW Pale",
+    "type": "Grain",
+    "grams": 1300.0
+   },
+   {
+    "name": "Munich Malt - 10L",
+    "type": "Grain",
+    "grams": 500.0
+   },
+   {
+    "name": "Carared",
+    "type": "Grain",
+    "grams": 100.0
+   },
+   {
+    "name": "CaraAroma",
+    "type": "Grain",
+    "grams": 50.0
+   },
+   {
+    "name": "Roasted Barley (UK)",
+    "type": "Grain",
+    "grams": 20.0
+   }
+  ],
+  "yeasts": [
+   "San Diego Super Yeast"
+  ],
+  "source_file": "Roasted Barley (UK)",
+  "labels": [
+   "batch10 Die Rote Rosamunde.jpg"
+  ]
+ },
+ {
+  "batch": 11,
+  "name": "Crime of the Centennial",
+  "full_name": "#12 Crime of the Centennial",
+  "date_display": "19-06-2017",
+  "date_iso": "2017-06-19",
+  "style": "American IPA",
+  "batch_size_display": "9.00 l",
+  "batch_size_l": 9.0,
+  "abv": 6.5,
+  "ebc": 13.7,
+  "ibu": 66.0,
+  "hops": [
+   {
+    "name": "Centennial",
+    "grams": 53.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Cascade",
+    "grams": 12.0,
+    "uses": [
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Malt (2 Row) Bel",
+    "type": "Grain",
+    "grams": 2000.0
+   },
+   {
+    "name": "Vienna Malt (Weyermann)",
+    "type": "Grain",
+    "grams": 350.0
+   },
+   {
+    "name": "Carared",
+    "type": "Grain",
+    "grams": 200.0
+   },
+   {
+    "name": "Cara-Pils/Dextrine",
+    "type": "Grain",
+    "grams": 101.0
+   }
+  ],
+  "yeasts": [
+   "Denny's Favorite 50"
+  ],
+  "source_file": "Cara-Pils/Dextrine",
+  "labels": [
+   "batch11 Smoke on the Porter.jpg"
+  ]
+ },
+ {
+  "batch": 12,
+  "name": "Crime of the Centennial",
+  "full_name": "#12 Crime of the Centennial",
+  "date_display": "03-07-2017",
+  "date_iso": "2017-07-03",
+  "style": "American IPA",
+  "batch_size_display": "9.00 L",
+  "batch_size_l": 9.0,
+  "abv": 6.5,
+  "ebc": 13.7,
+  "ibu": 63.3,
+  "hops": [
+   {
+    "name": "Centennial",
+    "grams": 71.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Malt (2 Row) Bel",
+    "type": "Grain",
+    "grams": 2000.0
+   },
+   {
+    "name": "Vienna Malt (Weyermann)",
+    "type": "Grain",
+    "grams": 350.0
+   },
+   {
+    "name": "Carared",
+    "type": "Grain",
+    "grams": 200.0
+   },
+   {
+    "name": "Cara-Pils/Dextrine",
+    "type": "Grain",
+    "grams": 101.0
+   }
+  ],
+  "yeasts": [
+   "Denny's Favorite 50"
+  ],
+  "source_file": "Cara-Pils/Dextrine",
+  "labels": [
+   "batch12 Crime of the Centennial.jpg"
+  ]
+ },
+ {
+  "batch": 13,
+  "name": "Time of the Season - v2",
+  "full_name": "#13 Time of the Season - v2",
+  "date_display": "06-07-2017",
+  "date_iso": "2017-07-06",
+  "style": "Saison",
+  "batch_size_display": "9.00 l",
+  "batch_size_l": 9.0,
+  "abv": 5.3,
+  "ebc": 11.0,
+  "ibu": 31.8,
+  "hops": [
+   {
+    "name": "East Kent Goldings (EKG)",
+    "grams": 12.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Sorachi Ace",
+    "grams": 27.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 15.0,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Malt, Maris Otter",
+    "type": "Grain",
+    "grams": 1400.0
+   },
+   {
+    "name": "White Wheat Malt",
+    "type": "Grain",
+    "grams": 500.0
+   },
+   {
+    "name": "Biscuit Malt",
+    "type": "Grain",
+    "grams": 120.0
+   }
+  ],
+  "yeasts": [
+   "French Saison"
+  ],
+  "source_file": "Biscuit Malt",
+  "labels": [
+   "batch13 Time of the Seasons - v2.jpg"
+  ]
+ },
+ {
+  "batch": 14,
+  "name": "I Heard it through the Grapefruit - v2",
+  "full_name": "#14 I Heard it through the Grapefruit - v2",
+  "date_display": "12-07-2017",
+  "date_iso": "2017-07-12",
+  "style": "American IPA",
+  "batch_size_display": "9.00 l",
+  "batch_size_l": 9.0,
+  "abv": 6.9,
+  "ebc": 11.8,
+  "ibu": 51.9,
+  "hops": [
+   {
+    "name": "Columbus/Tomahawk/Zeus (CTZ)",
+    "grams": 7.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Amarillo",
+    "grams": 35.5,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Simcoe",
+    "grams": 41.5,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 40.5,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Malt (2 Row) US",
+    "type": "Grain",
+    "grams": 2300.0
+   },
+   {
+    "name": "Munich Malt",
+    "type": "Grain",
+    "grams": 500.0
+   }
+  ],
+  "yeasts": [
+   "American Ale"
+  ],
+  "source_file": "Munich Malt",
+  "labels": [
+   "batch14 I Heard It Through The Grapefruit - v2.jpg"
+  ]
+ },
+ {
+  "batch": 15,
+  "name": "Ticket to the Tropics",
+  "full_name": "#15 Ticket to the Tropics",
+  "date_display": "20-07-2017",
+  "date_iso": "2017-07-20",
+  "style": "Witbier",
+  "batch_size_display": "20.00 L",
+  "batch_size_l": 20.0,
+  "abv": 5.6,
+  "ebc": 5.8,
+  "ibu": 18.1,
+  "hops": [
+   {
+    "name": "Saaz",
+    "grams": 10.1,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Simcoe",
+    "grams": 18.7,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Cascade",
+    "grams": 26.4,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 26.4,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pilsen (Dingemans)",
+    "type": "Grain",
+    "grams": 2200.0
+   },
+   {
+    "name": "Pale Wheat (Dingemans)",
+    "type": "Grain",
+    "grams": 2100.0
+   },
+   {
+    "name": "Oats, Flaked",
+    "type": "Grain",
+    "grams": 170.0
+   }
+  ],
+  "yeasts": [
+   "Forbidden Fruit"
+  ],
+  "source_file": "Oats, Flaked",
+  "labels": [
+   "batch15 Astrid's Ticket to the Tropics.jpg"
+  ]
+ },
+ {
+  "batch": 16,
+  "name": "Marmor, Stein und Eisen",
+  "full_name": "#16 Marmor, Stein und Eisen",
+  "date_display": "27-07-2017",
+  "date_iso": "2017-07-27",
+  "style": "Berliner Weisse",
+  "batch_size_display": "10.00 l",
+  "batch_size_l": 10.0,
+  "abv": 4.3,
+  "ebc": 4.7,
+  "ibu": 4.9,
+  "hops": [
+   {
+    "name": "Saaz",
+    "grams": 12.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Amarillo",
+    "grams": 19.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 19.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Wheat (Dingemans)",
+    "type": "Grain",
+    "grams": 900.0
+   },
+   {
+    "name": "Pilsen (Dingemans)",
+    "type": "Grain",
+    "grams": 900.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Pilsen (Dingemans)",
+  "labels": [
+   "batch16 Marmor, Stein und Eisen.jpg"
+  ]
+ },
+ {
+  "batch": 17,
+  "name": "Dead Pony Club achtig",
+  "full_name": "#19 Dead Pony Club achtig",
+  "date_display": "01-08-2017",
+  "date_iso": "2017-08-01",
+  "style": "American Pale Ale",
+  "batch_size_display": "20.00 l",
+  "batch_size_l": 20.0,
+  "abv": 4.3,
+  "ebc": 24.5,
+  "ibu": 20.7,
+  "hops": [
+   {
+    "name": "Citra",
+    "grams": 85.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Simcoe",
+    "grams": 60.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Mosaic (HBC 369)",
+    "grams": 62.5,
+    "uses": [
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Malt (Weyermann)",
+    "type": "Grain",
+    "grams": 2790.0
+   },
+   {
+    "name": "Carared (Weyermann)",
+    "type": "Grain",
+    "grams": 630.0
+   },
+   {
+    "name": "Caraaroma (Weyermann)",
+    "type": "Grain",
+    "grams": 190.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Caraaroma (Weyermann)",
+  "labels": [
+   "batch17 Warm beer and Cold Women.jpg"
+  ]
+ },
+ {
+  "batch": 18,
+  "name": "Liever in Mokum zonder Poen (Hollandsche Ale - 1866)",
+  "full_name": "#18 Liever in Mokum zonder Poen (Hollandsche Ale - 1866)",
+  "date_display": "02-08-2017",
+  "date_iso": "2017-08-02",
+  "style": "Historical Beer - Other",
+  "batch_size_display": "20.00 l",
+  "batch_size_l": 20.0,
+  "abv": 6.6,
+  "ebc": 14.1,
+  "ibu": 62.8,
+  "hops": [
+   {
+    "name": "East Kent Goldings (EKG)",
+    "grams": 110.0,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pilsen (Dingemans)",
+    "type": "Grain",
+    "grams": 2000.0
+   },
+   {
+    "name": "Pale Malt (Weyermann)",
+    "type": "Grain",
+    "grams": 1800.0
+   },
+   {
+    "name": "Pale Wheat (Dingemans)",
+    "type": "Grain",
+    "grams": 600.0
+   },
+   {
+    "name": "BlackSwaen©Honey Biscuit",
+    "type": "Grain",
+    "grams": 230.0
+   },
+   {
+    "name": "Carared (Weyermann)",
+    "type": "Grain",
+    "grams": 230.0
+   },
+   {
+    "name": "Honey",
+    "type": "Sugar",
+    "grams": 420.0
+   }
+  ],
+  "yeasts": [
+   "SafAle English Ale"
+  ],
+  "source_file": "Honey",
+  "labels": [
+   "batch18 Liever in Mokum zonder Poen - A.jpg",
+   "batch18 Liever in Mokum zonder Poen - B.jpg"
+  ]
+ },
+ {
+  "batch": 19,
+  "name": "Old & WIse - Pliny the Elder Clone",
+  "full_name": "#19 Old & WIse - Pliny the Elder Clone",
+  "date_display": "11-08-2017",
+  "date_iso": "2017-08-11",
+  "style": "Imperial IPA",
+  "batch_size_display": "22.00 l",
+  "batch_size_l": 22.0,
+  "abv": 7.7,
+  "ebc": 12.1,
+  "ibu": 184.0,
+  "hops": [
+   {
+    "name": "Columbus (Tomahawk)",
+    "grams": 155.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Simcoe",
+    "grams": 134.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Centennial",
+    "grams": 63.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Malt (2 Row) US",
+    "type": "Grain",
+    "grams": 6010.0
+   },
+   {
+    "name": "Cara-Pils/Dextrine",
+    "type": "Grain",
+    "grams": 272.0
+   },
+   {
+    "name": "Caramel/Crystal Malt - 40L",
+    "type": "Grain",
+    "grams": 272.0
+   },
+   {
+    "name": "Corn Sugar (Dextrose)",
+    "type": "Sugar",
+    "grams": 340.0
+   }
+  ],
+  "yeasts": [
+   "American Ale",
+   "Safale American"
+  ],
+  "source_file": "Corn Sugar (Dextrose)",
+  "labels": [
+   "batch19 Old & Wise.jpg"
+  ]
+ },
+ {
+  "batch": 20,
+  "name": "Say Say Say Saison",
+  "full_name": "#20 Say Say Say Saison",
+  "date_display": "06-07-2017",
+  "date_iso": "2017-07-06",
+  "style": "Saison",
+  "batch_size_display": "23.00 l",
+  "batch_size_l": 23.0,
+  "abv": 4.7,
+  "ebc": 8.1,
+  "ibu": 21.2,
+  "hops": [
+   {
+    "name": "East Kent Goldings (EKG)",
+    "grams": 65.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Saaz",
+    "grams": 80.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pilsen (Dingemans)",
+    "type": "Grain",
+    "grams": 3200.0
+   },
+   {
+    "name": "White Wheat Malt",
+    "type": "Grain",
+    "grams": 1300.0
+   },
+   {
+    "name": "Biscuit Malt",
+    "type": "Grain",
+    "grams": 230.0
+   }
+  ],
+  "yeasts": [
+   "French Saison"
+  ],
+  "source_file": "Biscuit Malt",
+  "labels": [
+   "batch20 Lust For Life Saison.jpg"
+  ]
+ },
+ {
+  "batch": 21,
+  "name": "Liever in Mokum zonder Poen (Hollandsche Ale - 1866)",
+  "full_name": "#21 Liever in Mokum zonder Poen (Hollandsche Ale - 1866)",
+  "date_display": "04-10-2017",
+  "date_iso": "2017-10-04",
+  "style": "Historical Beer - Other",
+  "batch_size_display": "23.00 l",
+  "batch_size_l": 23.0,
+  "abv": 6.3,
+  "ebc": 16.9,
+  "ibu": 63.4,
+  "hops": [
+   {
+    "name": "East Kent Goldings (EKG)",
+    "grams": 133.0,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Malt (Weyermann)",
+    "type": "Grain",
+    "grams": 3000.0
+   },
+   {
+    "name": "Swaen©Munich Dark",
+    "type": "Grain",
+    "grams": 1200.0
+   },
+   {
+    "name": "Pale Wheat (Dingemans)",
+    "type": "Grain",
+    "grams": 700.0
+   },
+   {
+    "name": "Carared (Weyermann)",
+    "type": "Grain",
+    "grams": 274.1
+   },
+   {
+    "name": "BlackSwaen©Honey Biscuit",
+    "type": "Grain",
+    "grams": 220.0
+   },
+   {
+    "name": "Honey",
+    "type": "Sugar",
+    "grams": 450.0
+   }
+  ],
+  "yeasts": [
+   "SafAle English Ale"
+  ],
+  "source_file": "Honey",
+  "labels": [
+   "batch21 Liever in Mokum zonder Poen A - v2.jpg",
+   "batch21 Liever in Mokum zonder Poen B - v2.jpg"
+  ]
+ },
+ {
+  "batch": 22,
+  "name": "Arno - Hop Hop Hop #3",
+  "full_name": "#22 Arno - Hop Hop Hop #3",
+  "date_display": "07-08-2017",
+  "date_iso": "2017-08-07",
+  "style": "Weissbier",
+  "batch_size_display": "22.00 L",
+  "batch_size_l": 22.0,
+  "abv": 5.2,
+  "ebc": 10.9,
+  "ibu": 34.3,
+  "hops": [
+   {
+    "name": "Saaz",
+    "grams": 10.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Amarillo",
+    "grams": 50.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 50.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 2200.0
+   },
+   {
+    "name": "Wheat Malt, Ger",
+    "type": "Grain",
+    "grams": 2200.0
+   },
+   {
+    "name": "Oats, Flaked",
+    "type": "Grain",
+    "grams": 300.0
+   },
+   {
+    "name": "Carahell",
+    "type": "Grain",
+    "grams": 222.8
+   },
+   {
+    "name": "Carared (Weyermann)",
+    "type": "Grain",
+    "grams": 222.8
+   }
+  ],
+  "yeasts": [
+   "Bavarian Wheat"
+  ],
+  "source_file": "Carared (Weyermann)",
+  "labels": []
+ },
+ {
+  "batch": 23,
+  "name": "White Wedding",
+  "full_name": "#23 White Wedding",
+  "date_display": "04-10-2017",
+  "date_iso": "2017-10-04",
+  "style": "Witbier",
+  "batch_size_display": "23.00 l",
+  "batch_size_l": 23.0,
+  "abv": 5.3,
+  "ebc": 6.2,
+  "ibu": 13.1,
+  "hops": [
+   {
+    "name": "Challenger",
+    "grams": 50.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Saaz",
+    "grams": 23.0,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pilsen (Dingemans)",
+    "type": "Grain",
+    "grams": 2053.3
+   },
+   {
+    "name": "White Wheat Malt",
+    "type": "Grain",
+    "grams": 2053.3
+   },
+   {
+    "name": "Wheat, Flaked",
+    "type": "Grain",
+    "grams": 466.7
+   }
+  ],
+  "yeasts": [
+   "Belgian Wit Ale"
+  ],
+  "source_file": "Wheat, Flaked",
+  "labels": [
+   "batch23 White Wedding.jpg"
+  ]
+ },
+ {
+  "batch": 24,
+  "name": "Many Shades of Black - Stout",
+  "full_name": "#24 Many Shades of Black - Stout",
+  "date_display": "11-10-2017",
+  "date_iso": "2017-10-11",
+  "style": "Imperial Stout",
+  "batch_size_display": "22.50 l",
+  "batch_size_l": 22.5,
+  "abv": 8.5,
+  "ebc": 100.1,
+  "ibu": 27.5,
+  "hops": [
+   {
+    "name": "Galena",
+    "grams": 27.4,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "East Kent Goldings (EKG)",
+    "grams": 13.7,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Rice Hulls",
+    "type": "Adjunct",
+    "grams": 100.0
+   },
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 5673.9
+   },
+   {
+    "name": "Swaen©Munich Dark",
+    "type": "Grain",
+    "grams": 1105.4
+   },
+   {
+    "name": "GoldSwaen©Brown",
+    "type": "Grain",
+    "grams": 665.2
+   },
+   {
+    "name": "BlackSwaen©Chocolate B",
+    "type": "Grain",
+    "grams": 553.7
+   },
+   {
+    "name": "Caraaroma (Weyermann)",
+    "type": "Grain",
+    "grams": 440.2
+   },
+   {
+    "name": "Caramel/Crystal Malt - 40L",
+    "type": "Grain",
+    "grams": 215.2
+   },
+   {
+    "name": "Roasted Barley",
+    "type": "Grain",
+    "grams": 195.7
+   }
+  ],
+  "yeasts": [
+   "Denny's Favorite"
+  ],
+  "source_file": "Roasted Barley",
+  "labels": [
+   "batch24 Many Shades of Black I - 3.jpg"
+  ]
+ },
+ {
+  "batch": 25,
+  "name": "A New England - NEIPA",
+  "full_name": "#25 A New England - NEIPA",
+  "date_display": "17-10-2017",
+  "date_iso": "2017-10-17",
+  "style": "American IPA",
+  "batch_size_display": "22.00 l",
+  "batch_size_l": 22.0,
+  "abv": 5.6,
+  "ebc": 9.3,
+  "ibu": 38.3,
+  "hops": [
+   {
+    "name": "Mosaic (HBC 369)",
+    "grams": 117.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 72.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Simcoe",
+    "grams": 69.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 3400.0
+   },
+   {
+    "name": "Barley, Flaked",
+    "type": "Grain",
+    "grams": 800.0
+   },
+   {
+    "name": "Oats, Malted (Thomas Fawcett)",
+    "type": "Grain",
+    "grams": 520.0
+   },
+   {
+    "name": "Wheat Malt, Bel",
+    "type": "Grain",
+    "grams": 460.0
+   },
+   {
+    "name": "Cara-Pils/Dextrine",
+    "type": "Grain",
+    "grams": 400.0
+   }
+  ],
+  "yeasts": [
+   "London Ale III"
+  ],
+  "source_file": "Cara-Pils/Dextrine",
+  "labels": [
+   "batch25 A New England.jpg"
+  ]
+ },
+ {
+  "batch": 26,
+  "name": "Rudolph the Red Nose Reinbeer",
+  "full_name": "#26 Rudolph the Red Nose Reinbeer",
+  "date_display": "17-10-2017",
+  "date_iso": "2017-10-17",
+  "style": "Sweet Stout",
+  "batch_size_display": "21.00 l",
+  "batch_size_l": 21.0,
+  "abv": 6.2,
+  "ebc": 83.1,
+  "ibu": 24.4,
+  "hops": [
+   {
+    "name": "Nugget",
+    "grams": 17.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Cascade",
+    "grams": 40.0,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Swaen©Munich Light",
+    "type": "Grain",
+    "grams": 1700.0
+   },
+   {
+    "name": "Swaen©Vienna",
+    "type": "Grain",
+    "grams": 1700.0
+   },
+   {
+    "name": "Oats, Malted (Thomas Fawcett)",
+    "type": "Grain",
+    "grams": 350.1
+   },
+   {
+    "name": "BlackSwaen©Honey Biscuit",
+    "type": "Grain",
+    "grams": 328.9
+   },
+   {
+    "name": "Oats, Flaked",
+    "type": "Grain",
+    "grams": 275.9
+   },
+   {
+    "name": "BlackSwaen©Black W",
+    "type": "Grain",
+    "grams": 254.7
+   },
+   {
+    "name": "Roasted Barley (Thomas Fawcett)",
+    "type": "Grain",
+    "grams": 200.0
+   },
+   {
+    "name": "Carafa II (Weyermann)",
+    "type": "Grain",
+    "grams": 150.0
+   },
+   {
+    "name": "Carared (Weyermann)",
+    "type": "Grain",
+    "grams": 150.0
+   },
+   {
+    "name": "Wheat Malt",
+    "type": "Grain",
+    "grams": 150.0
+   },
+   {
+    "name": "WHEAT CRYSTAL",
+    "type": "Grain",
+    "grams": 116.7
+   },
+   {
+    "name": "Milk Sugar (Lactose)",
+    "type": "Sugar",
+    "grams": 298.4
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Milk Sugar (Lactose)",
+  "labels": [
+   "batch26 Rudolph the Red Nosed ReinBeer.jpg"
+  ]
+ },
+ {
+  "batch": 27,
+  "name": "Warm Beer & Cold Women - v2 (Amber Ale)",
+  "full_name": "#27 Warm Beer & Cold Women - v2 (Amber Ale)",
+  "date_display": "10-11-2017",
+  "date_iso": "2017-11-10",
+  "style": "American Amber Ale",
+  "batch_size_display": "23.00 l",
+  "batch_size_l": 23.0,
+  "abv": 5.1,
+  "ebc": 30.4,
+  "ibu": 31.4,
+  "hops": [
+   {
+    "name": "Citra",
+    "grams": 94.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Simcoe",
+    "grams": 69.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Mosaic (HBC 369)",
+    "grams": 68.0,
+    "uses": [
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Malt (Weyermann)",
+    "type": "Grain",
+    "grams": 3400.0
+   },
+   {
+    "name": "Carared (Weyermann)",
+    "type": "Grain",
+    "grams": 700.0
+   },
+   {
+    "name": "Caraaroma (Weyermann)",
+    "type": "Grain",
+    "grams": 350.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Caraaroma (Weyermann)",
+  "labels": [
+   "batch27 Warm beer and Cold Women.jpg"
+  ]
+ },
+ {
+  "batch": 28,
+  "name": "Noa Pecan Mudcake clone (16L)",
+  "full_name": "#28 Noa Pecan Mudcake clone (16L)",
+  "date_display": "15-11-2017",
+  "date_iso": "2017-11-15",
+  "style": "Imperial Stout",
+  "batch_size_display": "16.00 l",
+  "batch_size_l": 16.0,
+  "abv": 11.3,
+  "ebc": 159.8,
+  "ibu": 63.5,
+  "hops": [
+   {
+    "name": "Challenger",
+    "grams": 76.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "East Kent Goldings (EKG)",
+    "grams": 20.0,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pecan noten",
+    "type": "Adjunct",
+    "grams": 305.0
+   },
+   {
+    "name": "Rice Hulls",
+    "type": "Adjunct",
+    "grams": 20.0
+   },
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 5200.0
+   },
+   {
+    "name": "Wheat Malt, Pale (Weyermann)",
+    "type": "Grain",
+    "grams": 900.0
+   },
+   {
+    "name": "BlackSwaen©Chocolate B",
+    "type": "Grain",
+    "grams": 601.5
+   },
+   {
+    "name": "GoldSwaen©Brown",
+    "type": "Grain",
+    "grams": 601.5
+   },
+   {
+    "name": "Roasted Barley (Thomas Fawcett)",
+    "type": "Grain",
+    "grams": 601.5
+   },
+   {
+    "name": "Oats, Flaked",
+    "type": "Grain",
+    "grams": 350.0
+   },
+   {
+    "name": "Honey",
+    "type": "Sugar",
+    "grams": 270.0
+   },
+   {
+    "name": "Sugar, Table (Sucrose)",
+    "type": "Sugar",
+    "grams": 96.0
+   }
+  ],
+  "yeasts": [
+   "Safale American",
+   "Nottingham Yeast"
+  ],
+  "source_file": "Sugar, Table (Sucrose)",
+  "labels": [
+   "batch28 Blackstar.jpg"
+  ]
+ },
+ {
+  "batch": 29,
+  "name": "Smoke on the Porter - v2",
+  "full_name": "#29 Smoke on the Porter - v2",
+  "date_display": "22-11-2017",
+  "date_iso": "2017-11-22",
+  "style": "Baltic Porter",
+  "batch_size_display": "22.00 l",
+  "batch_size_l": 22.0,
+  "abv": 7.2,
+  "ebc": 122.0,
+  "ibu": 71.2,
+  "hops": [
+   {
+    "name": "Galena",
+    "grams": 45.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Nugget",
+    "grams": 35.0,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 3100.0
+   },
+   {
+    "name": "Smoked Malt (Weyermann)",
+    "type": "Grain",
+    "grams": 1300.0
+   },
+   {
+    "name": "Munich Malt",
+    "type": "Grain",
+    "grams": 1000.0
+   },
+   {
+    "name": "Oats, Flaked",
+    "type": "Grain",
+    "grams": 650.0
+   },
+   {
+    "name": "Carafa II",
+    "type": "Grain",
+    "grams": 500.0
+   },
+   {
+    "name": "BlackSwaen©Black",
+    "type": "Grain",
+    "grams": 400.0
+   },
+   {
+    "name": "Chocolate Malt",
+    "type": "Grain",
+    "grams": 250.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Chocolate Malt",
+  "labels": [
+   "batch29 Smoke on the Porter - v2.jpg"
+  ]
+ },
+ {
+  "batch": 30,
+  "name": "Je Veux l'Amour (WV12 Clone)",
+  "full_name": "#30 Je Veux l'Amour (WV12 Clone)",
+  "date_display": "21-11-2017",
+  "date_iso": "2017-11-21",
+  "style": "Belgian Dark Strong Ale",
+  "batch_size_display": "17.00 l",
+  "batch_size_l": 17.0,
+  "abv": 10.7,
+  "ebc": 115.5,
+  "ibu": 34.8,
+  "hops": [
+   {
+    "name": "Brewer's Gold",
+    "grams": 25.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Hersbrucker",
+    "grams": 25.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Styrian Goldings",
+    "grams": 25.0,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Rice Hulls",
+    "type": "Adjunct",
+    "grams": 50.0
+   },
+   {
+    "name": "Pilsen (Dingemans)",
+    "type": "Grain",
+    "grams": 5000.0
+   },
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 1000.0
+   },
+   {
+    "name": "Special B Malt",
+    "type": "Grain",
+    "grams": 636.1
+   },
+   {
+    "name": "Carafa II (Weyermann)",
+    "type": "Grain",
+    "grams": 420.9
+   },
+   {
+    "name": "Candi Syrup, D-180",
+    "type": "Extract",
+    "grams": 1000.0
+   }
+  ],
+  "yeasts": [
+   "Safebrew Abbey Ale",
+   "Abbey Ale",
+   "Trappist High Gravity"
+  ],
+  "source_file": "Candi Syrup, D-180",
+  "labels": [
+   "batch30 Je Veux de l'Amour.jpg"
+  ]
+ },
+ {
+  "batch": 31,
+  "name": "A Shot in the Dark IPA - v2",
+  "full_name": "#31 A Shot in the Dark IPA - v2",
+  "date_display": "26-03-2018",
+  "date_iso": "2018-03-26",
+  "style": "Black IPA",
+  "batch_size_display": "20.00 l",
+  "batch_size_l": 20.0,
+  "abv": 5.6,
+  "ebc": 41.3,
+  "ibu": 56.3,
+  "hops": [
+   {
+    "name": "Brewer's Gold, Germany",
+    "grams": 24.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Nugget",
+    "grams": 0.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Cascade",
+    "grams": 40.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Centennial",
+    "grams": 32.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Mosaic (HBC 369)",
+    "grams": 55.0,
+    "uses": [
+     "Aroma"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 4300.0
+   },
+   {
+    "name": "Munich Malt - 10L",
+    "type": "Grain",
+    "grams": 420.0
+   },
+   {
+    "name": "BlackSwaen©Chocolate B",
+    "type": "Grain",
+    "grams": 230.0
+   },
+   {
+    "name": "Swaen©Munich Light",
+    "type": "Grain",
+    "grams": 80.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Swaen©Munich Light",
+  "labels": [
+   "batch31 A Shot In The Dark IPA - v2.jpg"
+  ]
+ },
+ {
+  "batch": 32,
+  "name": "Ach Heinrich (Hoppy Wiezen)",
+  "full_name": "#32 Ach Heinrich (Hoppy Wiezen)",
+  "date_display": "14-04-2018",
+  "date_iso": "2018-04-14",
+  "style": "Weissbier",
+  "batch_size_display": "22.00 l",
+  "batch_size_l": 22.0,
+  "abv": 5.1,
+  "ebc": 9.9,
+  "ibu": 27.6,
+  "hops": [
+   {
+    "name": "Saaz",
+    "grams": 10.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Amarillo",
+    "grams": 70.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Simcoe",
+    "grams": 70.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Rice Hulls",
+    "type": "Adjunct",
+    "grams": 20.0
+   },
+   {
+    "name": "Wheat Malt, Ger",
+    "type": "Grain",
+    "grams": 2300.0
+   },
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 1700.0
+   },
+   {
+    "name": "Oats, Flaked",
+    "type": "Grain",
+    "grams": 250.0
+   },
+   {
+    "name": "Carahell",
+    "type": "Grain",
+    "grams": 150.0
+   },
+   {
+    "name": "Caramel/Crystal Malt - 30L",
+    "type": "Grain",
+    "grams": 150.0
+   }
+  ],
+  "yeasts": [
+   "Bavarian Wheat"
+  ],
+  "source_file": "Caramel/Crystal Malt - 30L",
+  "labels": [
+   "batch32 Weiss blueht das Edelweiss - v3.jpg"
+  ]
+ },
+ {
+  "batch": 33,
+  "name": "Here Comes The Summer",
+  "full_name": "#33 Here Comes The Summer",
+  "date_display": "29-04-2018",
+  "date_iso": "2018-04-29",
+  "style": "American Pale Ale",
+  "batch_size_display": "23.00 l",
+  "batch_size_l": 23.0,
+  "abv": 5.1,
+  "ebc": 15.7,
+  "ibu": 30.6,
+  "hops": [
+   {
+    "name": "Amarillo",
+    "grams": 100.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Cascade",
+    "grams": 100.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 4000.0
+   },
+   {
+    "name": "Carahell (Weyermann)",
+    "type": "Grain",
+    "grams": 850.0
+   },
+   {
+    "name": "Caraamber (Weyermann)",
+    "type": "Grain",
+    "grams": 400.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Caraamber (Weyermann)",
+  "labels": [
+   "batch33 Here Comes The Summer.jpg"
+  ]
+ },
+ {
+  "batch": 34,
+  "name": "Goodnight Saigon",
+  "full_name": "#34 Goodnight Saigon",
+  "date_display": "11-05-2018",
+  "date_iso": "2018-05-11",
+  "style": "Saison",
+  "batch_size_display": "23.00 l",
+  "batch_size_l": 23.0,
+  "abv": 5.4,
+  "ebc": 14.1,
+  "ibu": 25.8,
+  "hops": [
+   {
+    "name": "East Kent Goldings (EKG)",
+    "grams": 27.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Sorachi Ace",
+    "grams": 67.0,
+    "uses": [
+     "Aroma",
+     "Boil"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 40.0,
+    "uses": [
+     "Aroma"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 3900.0
+   },
+   {
+    "name": "White Wheat Malt",
+    "type": "Grain",
+    "grams": 1500.0
+   },
+   {
+    "name": "BlackSwaen©Honey Biscuit",
+    "type": "Grain",
+    "grams": 300.0
+   }
+  ],
+  "yeasts": [
+   "Belle Saison"
+  ],
+  "source_file": "BlackSwaen©Honey Biscuit",
+  "labels": [
+   "batch34 Goodnight Saigon - normal.jpg",
+   "batch34 Goodnight Saigon.jpg"
+  ]
+ },
+ {
+  "batch": 35,
+  "name": "Seven Seas of Rye (RIPA)",
+  "full_name": "#35 Seven Seas of Rye (RIPA)",
+  "date_display": "20-05-2018",
+  "date_iso": "2018-05-20",
+  "style": "Rye IPA",
+  "batch_size_display": "22.00 l",
+  "batch_size_l": 22.0,
+  "abv": 6.2,
+  "ebc": 20.4,
+  "ibu": 55.7,
+  "hops": [
+   {
+    "name": "Simcoe",
+    "grams": 100.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 98.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 4700.0
+   },
+   {
+    "name": "Rye Malt (Weyermann)",
+    "type": "Grain",
+    "grams": 1000.0
+   },
+   {
+    "name": "Carared (Weyermann)",
+    "type": "Grain",
+    "grams": 300.0
+   },
+   {
+    "name": "Caramel Rye (Weyermann)",
+    "type": "Grain",
+    "grams": 200.0
+   },
+   {
+    "name": "Rye, Flaked",
+    "type": "Grain",
+    "grams": 200.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Rye, Flaked",
+  "labels": [
+   "batch35 Seven Seas of Rye.jpg"
+  ]
+ },
+ {
+  "batch": 36,
+  "name": "A New England - V2 - NEIPA",
+  "full_name": "#35 A New England - V2 - NEIPA",
+  "date_display": "26-05-2018",
+  "date_iso": "2018-05-26",
+  "style": "American IPA",
+  "batch_size_display": "22.00 l",
+  "batch_size_l": 22.0,
+  "abv": 6.0,
+  "ebc": 9.1,
+  "ibu": 31.9,
+  "hops": [
+   {
+    "name": "Mosaic (HBC 369)",
+    "grams": 117.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 72.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "El Dorado",
+    "grams": 69.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 3700.0
+   },
+   {
+    "name": "PlatinumSwaen©Wheat Flakes",
+    "type": "Grain",
+    "grams": 800.0
+   },
+   {
+    "name": "Oats, Malted (Thomas Fawcett)",
+    "type": "Grain",
+    "grams": 520.0
+   },
+   {
+    "name": "Wheat Malt, Bel",
+    "type": "Grain",
+    "grams": 460.0
+   },
+   {
+    "name": "Cara-Pils/Dextrine",
+    "type": "Grain",
+    "grams": 400.0
+   }
+  ],
+  "yeasts": [
+   "London Ale III"
+  ],
+  "source_file": "Cara-Pils/Dextrine",
+  "labels": [
+   "batch36 A New England - ruit.jpg"
+  ]
+ },
+ {
+  "batch": 37,
+  "name": "Atom Heart Mother (Hoppy Sour Ale)",
+  "full_name": "#37 Atom Heart Mother (Hoppy Sour Ale)",
+  "date_display": "05-06-2018",
+  "date_iso": "2018-06-05",
+  "style": "Mixed-Fermentation Sour Beer",
+  "batch_size_display": "22.00 l",
+  "batch_size_l": 22.0,
+  "abv": 5.6,
+  "ebc": 13.9,
+  "ibu": 13.3,
+  "hops": [
+   {
+    "name": "Centennial",
+    "grams": 15.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Amarillo",
+    "grams": 54.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Cascade",
+    "grams": 54.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 54.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 4200.0
+   },
+   {
+    "name": "Pale Wheat (Dingemans)",
+    "type": "Grain",
+    "grams": 400.0
+   },
+   {
+    "name": "Carafoam (Weyermann)",
+    "type": "Grain",
+    "grams": 250.0
+   },
+   {
+    "name": "PlatinumSwaen©Oat Flakes",
+    "type": "Grain",
+    "grams": 250.0
+   },
+   {
+    "name": "Acidulated (Weyermann)",
+    "type": "Grain",
+    "grams": 200.0
+   },
+   {
+    "name": "Crystal Wheat Malt (Thomas Fawcett)",
+    "type": "Grain",
+    "grams": 200.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Crystal Wheat Malt (Thomas Fawcett)",
+  "labels": [
+   "batch37 Atom Heart Mother.jpg"
+  ]
+ },
+ {
+  "batch": 38,
+  "name": "GOSE",
+  "full_name": "#38 GOSE",
+  "date_display": "08-07-2018",
+  "date_iso": "2018-07-08",
+  "style": "Gose",
+  "batch_size_display": "17.00 l",
+  "batch_size_l": 17.0,
+  "abv": 4.8,
+  "ebc": 5.6,
+  "ibu": 6.4,
+  "hops": [
+   {
+    "name": "Hallertauer Hersbrucker",
+    "grams": 12.0,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Wheat (Dingemans)",
+    "type": "Grain",
+    "grams": 1700.0
+   },
+   {
+    "name": "Pilsen (Dingemans)",
+    "type": "Grain",
+    "grams": 1200.0
+   },
+   {
+    "name": "Acidulated (Weyermann)",
+    "type": "Grain",
+    "grams": 700.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Acidulated (Weyermann)",
+  "labels": [
+   "batch38 La Vie en Gose.jpg"
+  ]
+ },
+ {
+  "batch": 39,
+  "name": "Wattel Brown Ale",
+  "full_name": "#39 Wattel Brown Ale",
+  "date_display": "11-08-2018",
+  "date_iso": "2018-08-11",
+  "style": "British Brown Ale",
+  "batch_size_display": "23.00 L",
+  "batch_size_l": 23.0,
+  "abv": 6.9,
+  "ebc": 38.8,
+  "ibu": 30.0,
+  "hops": [
+   {
+    "name": "East Kent Goldings (EKG)",
+    "grams": 100.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Columbus (Tomahawk)",
+    "grams": 25.0,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 4700.0
+   },
+   {
+    "name": "Pale Wheat (Dingemans)",
+    "type": "Grain",
+    "grams": 603.3
+   },
+   {
+    "name": "Swaen©Munich Dark",
+    "type": "Grain",
+    "grams": 603.4
+   },
+   {
+    "name": "Caramunich III (Weyermann)",
+    "type": "Grain",
+    "grams": 500.0
+   },
+   {
+    "name": "Caraamber (Weyermann)",
+    "type": "Grain",
+    "grams": 200.0
+   },
+   {
+    "name": "Chocolate Malt",
+    "type": "Grain",
+    "grams": 180.0
+   },
+   {
+    "name": "GreenSwaen©Gold Brown",
+    "type": "Grain",
+    "grams": 180.0
+   }
+  ],
+  "yeasts": [
+   "British Ale Yeast"
+  ],
+  "source_file": "GreenSwaen©Gold Brown",
+  "labels": []
+ },
+ {
+  "batch": 40,
+  "name": "Smoke on the Porter - v3",
+  "full_name": "#40 Smoke on the Porter - v3",
+  "date_display": "29-12-2018",
+  "date_iso": "2018-12-29",
+  "style": "Specialty Smoked Beer",
+  "batch_size_display": "20.00 L",
+  "batch_size_l": 20.0,
+  "abv": 7.2,
+  "ebc": 127.0,
+  "ibu": 52.1,
+  "hops": [
+   {
+    "name": "Chinook",
+    "grams": 70.0,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 3000.0
+   },
+   {
+    "name": "Smoked Malt (Weyermann)",
+    "type": "Grain",
+    "grams": 1350.0
+   },
+   {
+    "name": "Munich Malt",
+    "type": "Grain",
+    "grams": 1000.0
+   },
+   {
+    "name": "Carafa II",
+    "type": "Grain",
+    "grams": 550.2
+   },
+   {
+    "name": "Oats, Flaked",
+    "type": "Grain",
+    "grams": 550.0
+   },
+   {
+    "name": "BlackSwaen©Black",
+    "type": "Grain",
+    "grams": 350.0
+   },
+   {
+    "name": "Chocolate Malt",
+    "type": "Grain",
+    "grams": 190.0
+   }
+  ],
+  "yeasts": [
+   "SafAle English Ale"
+  ],
+  "source_file": "Chocolate Malt",
+  "labels": [
+   "batch40 Smoke on the Porter - v3.jpg"
+  ]
+ },
+ {
+  "batch": 41,
+  "name": "Smash my bitch up (Mosaic SMaSH)",
+  "full_name": "#41 Smash my bitch up (Mosaic SMaSH)",
+  "date_display": "06-01-2019",
+  "date_iso": "2019-01-06",
+  "style": "American Pale Ale",
+  "batch_size_display": "21.00 L",
+  "batch_size_l": 21.0,
+  "abv": 5.2,
+  "ebc": 11.1,
+  "ibu": 51.4,
+  "hops": [
+   {
+    "name": "Mosaic (HBC 369)",
+    "grams": 125.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Swaen©Ale",
+    "type": "Grain",
+    "grams": 5000.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Swaen©Ale",
+  "labels": [
+   "batch41 Sugarlite Blonde.jpg"
+  ]
+ },
+ {
+  "batch": 42,
+  "name": "White Wedding - v3",
+  "full_name": "#42 White Wedding - v3",
+  "date_display": "10-02-2019",
+  "date_iso": "2019-02-10",
+  "style": "Witbier",
+  "batch_size_display": "22.00 L",
+  "batch_size_l": 22.0,
+  "abv": 5.0,
+  "ebc": 5.4,
+  "ibu": 13.9,
+  "hops": [
+   {
+    "name": "Challenger",
+    "grams": 48.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Saaz",
+    "grams": 22.0,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Wheat (Dingemans)",
+    "type": "Grain",
+    "grams": 2000.0
+   },
+   {
+    "name": "Pilsen (Dingemans)",
+    "type": "Grain",
+    "grams": 2000.0
+   },
+   {
+    "name": "Wheat, Flaked",
+    "type": "Grain",
+    "grams": 400.0
+   }
+  ],
+  "yeasts": [
+   "Belgian Witbier"
+  ],
+  "source_file": "Wheat, Flaked",
+  "labels": [
+   "batch42 White Wedding - v3.jpg"
+  ]
+ },
+ {
+  "batch": 43,
+  "name": "That's The Way I Like It IPA",
+  "full_name": "#43 That's The Way I Like It IPA",
+  "date_display": "17-02-2019",
+  "date_iso": "2019-02-17",
+  "style": "American IPA",
+  "batch_size_display": "21.00 L",
+  "batch_size_l": 21.0,
+  "abv": 6.4,
+  "ebc": 20.7,
+  "ibu": 47.2,
+  "hops": [
+   {
+    "name": "Citra",
+    "grams": 102.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Simcoe",
+    "grams": 76.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Mosaic (HBC 369)",
+    "grams": 65.0,
+    "uses": [
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Malt (Weyermann)",
+    "type": "Grain",
+    "grams": 4400.0
+   },
+   {
+    "name": "Swaen©Vienna",
+    "type": "Grain",
+    "grams": 650.0
+   },
+   {
+    "name": "Caraamber (Weyermann)",
+    "type": "Grain",
+    "grams": 400.0
+   },
+   {
+    "name": "Caramunich III (Weyermann)",
+    "type": "Grain",
+    "grams": 200.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Caramunich III (Weyermann)",
+  "labels": [
+   "batch43 That's The Way I Like It API.jpg"
+  ]
+ },
+ {
+  "batch": 44,
+  "name": "C C C Rider",
+  "full_name": "#44 C C C Rider",
+  "date_display": "16-08-2019",
+  "date_iso": "2019-08-16",
+  "style": "American IPA",
+  "batch_size_display": "11.50 L",
+  "batch_size_l": 11.5,
+  "abv": 6.3,
+  "ebc": 15.2,
+  "ibu": 49.8,
+  "hops": [
+   {
+    "name": "Columbus (Tomahawk)",
+    "grams": 15.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Cascade",
+    "grams": 55.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 55.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 3000.0
+   },
+   {
+    "name": "Carared",
+    "type": "Grain",
+    "grams": 200.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Carared",
+  "labels": [
+   "batch44 C C C Rider.jpg"
+  ]
+ },
+ {
+  "batch": 45,
+  "name": "Arno verjaardagsbier",
+  "full_name": "#45 Arno verjaardagsbier",
+  "date_display": "23-03-2019",
+  "date_iso": "2019-03-23",
+  "style": "American Pale Ale",
+  "batch_size_display": "23.00 L",
+  "batch_size_l": 23.0,
+  "abv": 4.8,
+  "ebc": 18.6,
+  "ibu": 29.2,
+  "hops": [
+   {
+    "name": "Wakatu (Hallertau Aroma)",
+    "grams": 100.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Mosaic (HBC 369)",
+    "grams": 100.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 3900.0
+   },
+   {
+    "name": "Carared (Weyermann)",
+    "type": "Grain",
+    "grams": 700.0
+   },
+   {
+    "name": "Caraamber (Weyermann)",
+    "type": "Grain",
+    "grams": 400.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Caraamber (Weyermann)",
+  "labels": []
+ },
+ {
+  "batch": 46,
+  "name": "Ale the Young Dudes",
+  "full_name": "#46 Ale the Young Dudes",
+  "date_display": "14-09-2019",
+  "date_iso": "2019-09-14",
+  "style": "American Pale Ale",
+  "batch_size_display": "11.50 L",
+  "batch_size_l": 11.5,
+  "abv": 4.8,
+  "ebc": 13.1,
+  "ibu": 39.5,
+  "hops": [
+   {
+    "name": "Amarillo",
+    "grams": 60.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Simcoe",
+    "grams": 46.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 1900.0
+   },
+   {
+    "name": "Pale Wheat (Dingemans)",
+    "type": "Grain",
+    "grams": 500.0
+   },
+   {
+    "name": "Caraamber (Weyermann)",
+    "type": "Grain",
+    "grams": 200.0
+   }
+  ],
+  "yeasts": [
+   "SafAle English Ale"
+  ],
+  "source_file": "Caraamber (Weyermann)",
+  "labels": [
+   "batch46 Ale the Young Dudes.jpg"
+  ]
+ },
+ {
+  "batch": 47,
+  "name": "Black Hole Sun - v2",
+  "full_name": "#47 Black Hole Sun - v2",
+  "date_display": "13-10-2019",
+  "date_iso": "2019-10-13",
+  "style": "American Stout",
+  "batch_size_display": "12.00 L",
+  "batch_size_l": 12.0,
+  "abv": 6.5,
+  "ebc": 100.2,
+  "ibu": 36.4,
+  "hops": [
+   {
+    "name": "Challenger",
+    "grams": 40.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Cascade",
+    "grams": 40.0,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 2600.0
+   },
+   {
+    "name": "Caramunich III (Weyermann)",
+    "type": "Grain",
+    "grams": 250.0
+   },
+   {
+    "name": "Barley, Flaked",
+    "type": "Grain",
+    "grams": 200.0
+   },
+   {
+    "name": "Carafa Special II (Weyermann)",
+    "type": "Grain",
+    "grams": 200.0
+   },
+   {
+    "name": "Roasted Barley (Thomas Fawcett)",
+    "type": "Grain",
+    "grams": 200.0
+   },
+   {
+    "name": "Caramel Rye (Weyermann)",
+    "type": "Grain",
+    "grams": 150.0
+   },
+   {
+    "name": "Crystal Wheat Malt (Thomas Fawcett)",
+    "type": "Grain",
+    "grams": 150.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Crystal Wheat Malt (Thomas Fawcett)",
+  "labels": [
+   "batch47 Black Hole Sun - v1.jpg",
+   "batch47 Black Hole Sun - v2.jpg"
+  ]
+ },
+ {
+  "batch": 48,
+  "name": "Dance Little Citra (SIngle Hop IPA)",
+  "full_name": "#48 Dance Little Citra (SIngle Hop IPA)",
+  "date_display": "03-01-2020",
+  "date_iso": "2020-01-03",
+  "style": "American IPA",
+  "batch_size_display": "12.00 L",
+  "batch_size_l": 12.0,
+  "abv": 6.9,
+  "ebc": 19.7,
+  "ibu": 53.8,
+  "hops": [
+   {
+    "name": "Citra",
+    "grams": 100.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 3300.0
+   },
+   {
+    "name": "Caraamber (Weyermann)",
+    "type": "Grain",
+    "grams": 400.0
+   }
+  ],
+  "yeasts": [
+   "US West Coast"
+  ],
+  "source_file": "Caraamber (Weyermann)",
+  "labels": [
+   "batch48 Dance Little Citra.jpg"
+  ]
+ },
+ {
+  "batch": 49,
+  "name": "I Shot The Sherrif (Green Bullet IPA)",
+  "full_name": "#49 I Shot The Sherrif (Green Bullet IPA)",
+  "date_display": "08-03-2020",
+  "date_iso": "2020-03-08",
+  "style": "American IPA",
+  "batch_size_display": "12.00 L",
+  "batch_size_l": 12.0,
+  "abv": 5.9,
+  "ebc": 22.9,
+  "ibu": 42.8,
+  "hops": [
+   {
+    "name": "Green Bullet",
+    "grams": 45.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Simcoe",
+    "grams": 45.0,
+    "uses": [
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Cascade",
+    "grams": 40.0,
+    "uses": [
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Malt (Weyermann)",
+    "type": "Grain",
+    "grams": 2400.0
+   },
+   {
+    "name": "Carared (Weyermann)",
+    "type": "Grain",
+    "grams": 280.0
+   },
+   {
+    "name": "GoldSwaen©Munich Dark",
+    "type": "Grain",
+    "grams": 250.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "GoldSwaen©Munich Dark",
+  "labels": [
+   "batch49 I Shot The Sheriff.jpg"
+  ]
+ },
+ {
+  "batch": 50,
+  "name": "Blackstar, v2 (Mudcake Imperial Stout)",
+  "full_name": "#50 Blackstar, v2 (Mudcake Imperial Stout)",
+  "date_display": "11-04-2020",
+  "date_iso": "2020-04-11",
+  "style": "Imperial Stout",
+  "batch_size_display": "13.00 L",
+  "batch_size_l": 13.0,
+  "abv": 11.7,
+  "ebc": 159.2,
+  "ibu": 59.4,
+  "hops": [
+   {
+    "name": "Challenger",
+    "grams": 55.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Target",
+    "grams": 16.0,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pecan noten",
+    "type": "Adjunct",
+    "grams": 300.0
+   },
+   {
+    "name": "Rice Hulls",
+    "type": "Adjunct",
+    "grams": 30.0
+   },
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 3500.0
+   },
+   {
+    "name": "Swaen©Pilsner",
+    "type": "Grain",
+    "grams": 700.0
+   },
+   {
+    "name": "Wheat Malt, Pale (Weyermann)",
+    "type": "Grain",
+    "grams": 700.0
+   },
+   {
+    "name": "BlackSwaen©Chocolate B",
+    "type": "Grain",
+    "grams": 500.0
+   },
+   {
+    "name": "GoldSwaen©Brown",
+    "type": "Grain",
+    "grams": 500.0
+   },
+   {
+    "name": "Roasted Barley (Thomas Fawcett)",
+    "type": "Grain",
+    "grams": 500.0
+   },
+   {
+    "name": "Oats, Flaked",
+    "type": "Grain",
+    "grams": 250.0
+   },
+   {
+    "name": "Honey",
+    "type": "Sugar",
+    "grams": 200.0
+   },
+   {
+    "name": "Sugar, Table (Sucrose)",
+    "type": "Sugar",
+    "grams": 80.0
+   }
+  ],
+  "yeasts": [
+   "Nottingham Yeast"
+  ],
+  "source_file": "Sugar, Table (Sucrose)",
+  "labels": [
+   "batch50 Blackstar v2.jpg"
+  ]
+ },
+ {
+  "batch": 51,
+  "name": "Is the the Way to Amarillo IPA",
+  "full_name": "#51 Is the the Way to Amarillo IPA",
+  "date_display": "22-05-2020",
+  "date_iso": "2020-05-22",
+  "style": "American IPA",
+  "batch_size_display": "12.00 L",
+  "batch_size_l": 12.0,
+  "abv": 5.5,
+  "ebc": 11.3,
+  "ibu": 59.9,
+  "hops": [
+   {
+    "name": "Columbus (Tomahawk)",
+    "grams": 16.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Amarillo",
+    "grams": 60.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "El Dorado",
+    "grams": 55.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Swaen©Pilsner",
+    "type": "Grain",
+    "grams": 3100.0
+   },
+   {
+    "name": "Caramel/Crystal Malt - 30L",
+    "type": "Grain",
+    "grams": 200.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Caramel/Crystal Malt - 30L",
+  "labels": [
+   "batch51 Way to Amarillo.jpg"
+  ]
+ },
+ {
+  "batch": 52,
+  "name": "Crime o/t Centennial",
+  "full_name": "#52 Crime o/t Centennial",
+  "date_display": "07-06-2020",
+  "date_iso": "2020-06-07",
+  "style": "American Pale Ale",
+  "batch_size_display": "20.00 L",
+  "batch_size_l": 20.0,
+  "abv": 5.6,
+  "ebc": 11.1,
+  "ibu": 33.4,
+  "hops": [
+   {
+    "name": "Centennial",
+    "grams": 100.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Simcoe",
+    "grams": 75.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Amarillo",
+    "grams": 65.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pilsen (Dingemans)",
+    "type": "Grain",
+    "grams": 4000.0
+   },
+   {
+    "name": "Carared (Weyermann)",
+    "type": "Grain",
+    "grams": 500.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Carared (Weyermann)",
+  "labels": [
+   "batch52 Tropical Hot Dog Night, v2.jpg"
+  ]
+ },
+ {
+  "batch": 53,
+  "name": "Red Right Hand IPA",
+  "full_name": "#53 Red Right Hand IPA",
+  "date_display": "30-07-2020",
+  "date_iso": "2020-07-30",
+  "style": "Red IPA",
+  "batch_size_display": "20.00 L",
+  "batch_size_l": 20.0,
+  "abv": 6.2,
+  "ebc": 29.9,
+  "ibu": 44.0,
+  "hops": [
+   {
+    "name": "Chinook",
+    "grams": 100.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Mosaic (HBC 369)",
+    "grams": 100.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Centennial",
+    "grams": 60.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pilsen (Dingemans)",
+    "type": "Grain",
+    "grams": 3600.0
+   },
+   {
+    "name": "Swaen©Munich Light",
+    "type": "Grain",
+    "grams": 1400.0
+   },
+   {
+    "name": "Caramunich I (Weyermann)",
+    "type": "Grain",
+    "grams": 220.6
+   },
+   {
+    "name": "Melanoidin (Weyermann)",
+    "type": "Grain",
+    "grams": 176.5
+   },
+   {
+    "name": "Roasted Barley",
+    "type": "Grain",
+    "grams": 100.0
+   }
+  ],
+  "yeasts": [
+   "Nottingham Yeast"
+  ],
+  "source_file": "Roasted Barley",
+  "labels": [
+   "batch53 Red Right Hand IPA.jpg"
+  ]
+ },
+ {
+  "batch": 54,
+  "name": "C C C Rider",
+  "full_name": "#54 C C C Rider",
+  "date_display": "05-12-2020",
+  "date_iso": "2020-12-05",
+  "style": "American IPA",
+  "batch_size_display": "20.00 L",
+  "batch_size_l": 20.0,
+  "abv": 6.3,
+  "ebc": 14.6,
+  "ibu": 49.1,
+  "hops": [
+   {
+    "name": "Columbus (Tomahawk)",
+    "grams": 25.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Cascade",
+    "grams": 100.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 100.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pilsner (Weyermann)",
+    "type": "Grain",
+    "grams": 4000.0
+   },
+   {
+    "name": "Pale Malt, Maris Otter",
+    "type": "Grain",
+    "grams": 800.0
+   },
+   {
+    "name": "Melanoidin (Weyermann)",
+    "type": "Grain",
+    "grams": 600.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Melanoidin (Weyermann)",
+  "labels": [
+   "batch54 C C C Rider - v2.jpg"
+  ]
+ },
+ {
+  "batch": 55,
+  "name": "Heb je even voor mij (gouden bruiloft)",
+  "full_name": "#55 Heb je even voor mij (gouden bruiloft)",
+  "date_display": "29-01-2021",
+  "date_iso": "2021-01-29",
+  "style": "Witbier",
+  "batch_size_display": "23.00 L",
+  "batch_size_l": 23.0,
+  "abv": 5.3,
+  "ebc": 7.8,
+  "ibu": 19.7,
+  "hops": [
+   {
+    "name": "Herkules",
+    "grams": 8.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Hallertau Blanc",
+    "grams": 10.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Cascade",
+    "grams": 25.0,
+    "uses": [
+     "Aroma"
+    ]
+   },
+   {
+    "name": "Saaz",
+    "grams": 20.0,
+    "uses": [
+     "Aroma"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Rice Hulls",
+    "type": "Adjunct",
+    "grams": 200.0
+   },
+   {
+    "name": "Pale Wheat (Dingemans)",
+    "type": "Grain",
+    "grams": 2200.0
+   },
+   {
+    "name": "Pilsen (Dingemans)",
+    "type": "Grain",
+    "grams": 2200.0
+   },
+   {
+    "name": "PlatinumSwaen©Oat Flakes",
+    "type": "Grain",
+    "grams": 400.0
+   },
+   {
+    "name": "Caramel/Crystal Malt - 30L",
+    "type": "Grain",
+    "grams": 180.0
+   }
+  ],
+  "yeasts": [
+   "Belgian Witbier"
+  ],
+  "source_file": "Caramel/Crystal Malt - 30L",
+  "labels": [
+   "batch55 Heb je even voor mij - Bart en Annie.jpg"
+  ]
+ },
+ {
+  "batch": 56,
+  "name": "Yéké yéké (El Dorado SMaSH)",
+  "full_name": "#56 Yéké yéké (El Dorado SMaSH)",
+  "date_display": "19-02-2021",
+  "date_iso": "2021-02-19",
+  "style": "American Pale Ale",
+  "batch_size_display": "21.00 L",
+  "batch_size_l": 21.0,
+  "abv": 5.8,
+  "ebc": 11.1,
+  "ibu": 38.5,
+  "hops": [
+   {
+    "name": "El Dorado",
+    "grams": 125.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 5000.0
+   }
+  ],
+  "yeasts": [
+   "US West Coast"
+  ],
+  "source_file": "Pale Ale (Dingemans)",
+  "labels": [
+   "batch56 Yeke Yeke.jpg"
+  ]
+ },
+ {
+  "batch": 57,
+  "name": "Here Comes the Summer, v3",
+  "full_name": "#57 Here Comes the Summer, v3",
+  "date_display": "28-05-2021",
+  "date_iso": "2021-05-28",
+  "style": "American Pale Ale",
+  "batch_size_display": "22.00 L",
+  "batch_size_l": 22.0,
+  "abv": 4.7,
+  "ebc": 14.0,
+  "ibu": 34.5,
+  "hops": [
+   {
+    "name": "Green Bullet",
+    "grams": 16.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Simcoe",
+    "grams": 110.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Mosaic (HBC 369)",
+    "grams": 38.0,
+    "uses": [
+     "Aroma"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 40.0,
+    "uses": [
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 4000.0
+   },
+   {
+    "name": "Caraamber (Weyermann)",
+    "type": "Grain",
+    "grams": 400.0
+   },
+   {
+    "name": "Acidulated (Weyermann)",
+    "type": "Grain",
+    "grams": 200.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Acidulated (Weyermann)",
+  "labels": [
+   "batch57 Here Comes The Summer, v3.jpg"
+  ]
+ },
+ {
+  "batch": 58,
+  "name": "When I'm 50 (NEIPA)",
+  "full_name": "#58 When I'm 50 (NEIPA)",
+  "date_display": "14-07-2021",
+  "date_iso": "2021-07-14",
+  "style": "Specialty IPA",
+  "batch_size_display": "22.00 L",
+  "batch_size_l": 22.0,
+  "abv": 5.2,
+  "ebc": 6.9,
+  "ibu": 24.4,
+  "hops": [
+   {
+    "name": "Citra",
+    "grams": 85.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Mosaic (HBC 369)",
+    "grams": 125.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Simcoe",
+    "grams": 50.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pilsen (Dingemans)",
+    "type": "Grain",
+    "grams": 2100.0
+   },
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 1500.0
+   },
+   {
+    "name": "PlatinumSwaen©Wheat Flakes",
+    "type": "Grain",
+    "grams": 600.0
+   },
+   {
+    "name": "Oats, Malted (Thomas Fawcett)",
+    "type": "Grain",
+    "grams": 450.0
+   },
+   {
+    "name": "Pale Wheat (Dingemans)",
+    "type": "Grain",
+    "grams": 400.0
+   },
+   {
+    "name": "Cara-Pils/Dextrine",
+    "type": "Grain",
+    "grams": 100.0
+   }
+  ],
+  "yeasts": [
+   "London Ale III",
+   "SafAle English Ale"
+  ],
+  "source_file": "Cara-Pils/Dextrine",
+  "labels": [
+   "batch58 When I'm 50.jpg"
+  ]
+ },
+ {
+  "batch": 59,
+  "name": "Fat Bottom Hops",
+  "full_name": "#59 Fat Bottom Hops",
+  "date_display": "03-10-2021",
+  "date_iso": "2021-10-03",
+  "style": "American IPA",
+  "batch_size_display": "23.00 L",
+  "batch_size_l": 23.0,
+  "abv": 5.7,
+  "ebc": 15.8,
+  "ibu": 28.6,
+  "hops": [
+   {
+    "name": "Centennial",
+    "grams": 50.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 100.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Cascade",
+    "grams": 55.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Nectaron hop (Ed)",
+    "grams": 60.0,
+    "uses": [
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 5300.0
+   },
+   {
+    "name": "Caraamber (Weyermann)",
+    "type": "Grain",
+    "grams": 400.0
+   },
+   {
+    "name": "Melanoidin (Weyermann)",
+    "type": "Grain",
+    "grams": 100.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Melanoidin (Weyermann)",
+  "labels": [
+   "batch59 Fat Bottomed Hops.jpg"
+  ]
+ },
+ {
+  "batch": 60,
+  "name": "Whiter Shade of Pale Ale",
+  "full_name": "#60 Whiter Shade of Pale Ale",
+  "date_display": "08-01-2022",
+  "date_iso": "2022-01-08",
+  "style": "American Pale Ale",
+  "batch_size_display": "23.00 L",
+  "batch_size_l": 23.0,
+  "abv": 4.7,
+  "ebc": 8.0,
+  "ibu": 28.2,
+  "hops": [
+   {
+    "name": "Centennial",
+    "grams": 47.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 95.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Nectaron hop (Ed)",
+    "grams": 40.0,
+    "uses": [
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 3400.0
+   },
+   {
+    "name": "Pale Wheat (Dingemans)",
+    "type": "Grain",
+    "grams": 1000.0
+   },
+   {
+    "name": "PlatinumSwaen©Oat Flakes",
+    "type": "Grain",
+    "grams": 300.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "PlatinumSwaen©Oat Flakes",
+  "labels": [
+   "batch60 Whiter Shade of Pale Ale.jpg"
+  ]
+ },
+ {
+  "batch": 61,
+  "name": "Mr Blue Sky",
+  "full_name": "#61 Mr Blue Sky",
+  "date_display": "12-03-2022",
+  "date_iso": "2022-03-12",
+  "style": "Saison",
+  "batch_size_display": "21.00 L",
+  "batch_size_l": 21.0,
+  "abv": 6.1,
+  "ebc": 7.2,
+  "ibu": 21.2,
+  "hops": [
+   {
+    "name": "East Kent Goldings (EKG)",
+    "grams": 40.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Styrian Goldings",
+    "grams": 26.0,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pilsen (Dingemans)",
+    "type": "Grain",
+    "grams": 5000.0
+   },
+   {
+    "name": "Pale Wheat (Dingemans)",
+    "type": "Grain",
+    "grams": 254.3
+   },
+   {
+    "name": "Swaen©Munich Light",
+    "type": "Grain",
+    "grams": 250.0
+   }
+  ],
+  "yeasts": [
+   "Belgian Saison",
+   "Belgian Witbier"
+  ],
+  "source_file": "Swaen©Munich Light",
+  "labels": [
+   "batch61 Mr Blue Sky.jpg"
+  ]
+ },
+ {
+  "batch": 62,
+  "name": "Tropical Hot Dog Night",
+  "full_name": "#62 Tropical Hot Dog Night",
+  "date_display": "02-04-2022",
+  "date_iso": "2022-04-02",
+  "style": "American IPA",
+  "batch_size_display": "22.00 L",
+  "batch_size_l": 22.0,
+  "abv": 5.7,
+  "ebc": 14.2,
+  "ibu": 31.9,
+  "hops": [
+   {
+    "name": "Target",
+    "grams": 20.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Amarillo",
+    "grams": 70.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "El Dorado",
+    "grams": 60.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Simcoe",
+    "grams": 80.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 5000.0
+   },
+   {
+    "name": "Carared (Weyermann)",
+    "type": "Grain",
+    "grams": 500.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Carared (Weyermann)",
+  "labels": [
+   "batch62 Tropical Hot Dog Night, v3.jpg"
+  ]
+ },
+ {
+  "batch": 63,
+  "name": "Pull Up To The Bumper",
+  "full_name": "#63 Pull Up To The Bumper",
+  "date_display": "21-05-2022",
+  "date_iso": "2022-05-21",
+  "style": "Black IPA",
+  "batch_size_display": "22.00 L",
+  "batch_size_l": 22.0,
+  "abv": 6.0,
+  "ebc": 72.1,
+  "ibu": 31.6,
+  "hops": [
+   {
+    "name": "Target",
+    "grams": 20.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Amarillo",
+    "grams": 65.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "El Dorado",
+    "grams": 65.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Simcoe",
+    "grams": 14.0,
+    "uses": [
+     "Aroma"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 80.0,
+    "uses": [
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 4200.0
+   },
+   {
+    "name": "Caramel Rye (Weyermann)",
+    "type": "Grain",
+    "grams": 400.0
+   },
+   {
+    "name": "Caramunich I (Weyermann)",
+    "type": "Grain",
+    "grams": 400.0
+   },
+   {
+    "name": "Rye, Flaked",
+    "type": "Grain",
+    "grams": 400.0
+   },
+   {
+    "name": "BlackSwaen©Chocolate B",
+    "type": "Grain",
+    "grams": 300.0
+   },
+   {
+    "name": "Carafa II (Weyermann)",
+    "type": "Grain",
+    "grams": 285.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Carafa II (Weyermann)",
+  "labels": [
+   "batch63 Pull Up To The Bumper.jpg"
+  ]
+ },
+ {
+  "batch": 64,
+  "name": "Whiskey for the Holy Ghost (Mark Lanegan)",
+  "full_name": "#64 Whiskey for the Holy Ghost (Mark Lanegan)",
+  "date_display": "04-07-2022",
+  "date_iso": "2022-07-04",
+  "style": "Imperial Stout",
+  "batch_size_display": "20.00 L",
+  "batch_size_l": 20.0,
+  "abv": 8.8,
+  "ebc": 109.0,
+  "ibu": 39.9,
+  "hops": [
+   {
+    "name": "Galena",
+    "grams": 61.0,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Rice Hulls",
+    "type": "Adjunct",
+    "grams": 100.0
+   },
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 4500.0
+   },
+   {
+    "name": "Brown Malt",
+    "type": "Grain",
+    "grams": 650.0
+   },
+   {
+    "name": "Pale Chocolate Malt",
+    "type": "Grain",
+    "grams": 650.0
+   },
+   {
+    "name": "Swaen©Munich Light",
+    "type": "Grain",
+    "grams": 500.0
+   },
+   {
+    "name": "Caramunich I (Weyermann)",
+    "type": "Grain",
+    "grams": 390.0
+   },
+   {
+    "name": "Roasted Barley (Thomas Fawcett)",
+    "type": "Grain",
+    "grams": 350.0
+   },
+   {
+    "name": "Special B (Dingemans)",
+    "type": "Grain",
+    "grams": 300.0
+   },
+   {
+    "name": "Sugar, Table (Sucrose)",
+    "type": "Sugar",
+    "grams": 200.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Sugar, Table (Sucrose)",
+  "labels": [
+   "batch64 Whiskey For The Holy Ghost.jpg"
+  ]
+ },
+ {
+  "batch": 65,
+  "name": "Vanilla Oat Cream NEIPA (Milkshake IPA)",
+  "full_name": "#65 Vanilla Oat Cream NEIPA (Milkshake IPA)",
+  "date_display": "12-11-2022",
+  "date_iso": "2022-11-12",
+  "style": "Specialty IPA",
+  "batch_size_display": "21.00 L",
+  "batch_size_l": 21.0,
+  "abv": 5.5,
+  "ebc": 6.7,
+  "ibu": 14.8,
+  "hops": [
+   {
+    "name": "Citra",
+    "grams": 130.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "El Dorado",
+    "grams": 100.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Simcoe",
+    "grams": 100.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Rice Hulls",
+    "type": "Adjunct",
+    "grams": 500.0
+   },
+   {
+    "name": "Pilsen (Dingemans)",
+    "type": "Grain",
+    "grams": 4000.0
+   },
+   {
+    "name": "Oats, Flaked",
+    "type": "Grain",
+    "grams": 1500.0
+   },
+   {
+    "name": "Carahell (Weyermann)",
+    "type": "Grain",
+    "grams": 96.2
+   },
+   {
+    "name": "Milk Sugar (Lactose)",
+    "type": "Sugar",
+    "grams": 500.0
+   }
+  ],
+  "yeasts": [
+   "London Ale III"
+  ],
+  "source_file": "Milk Sugar (Lactose)",
+  "labels": [
+   "batch65 Hey! Ho! Let's Hop!.jpg"
+  ]
+ },
+ {
+  "batch": 66,
+  "name": "Is the the Way to Amarillo IPA, v2",
+  "full_name": "#66 Is the the Way to Amarillo IPA, v2",
+  "date_display": "28-12-2022",
+  "date_iso": "2022-12-28",
+  "style": "American IPA",
+  "batch_size_display": "23.00 L",
+  "batch_size_l": 23.0,
+  "abv": 6.1,
+  "ebc": 13.1,
+  "ibu": 28.2,
+  "hops": [
+   {
+    "name": "Centennial",
+    "grams": 50.0,
+    "uses": [
+     "Aroma",
+     "Boil"
+    ]
+   },
+   {
+    "name": "Amarillo",
+    "grams": 100.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Cascade",
+    "grams": 100.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 5300.0
+   },
+   {
+    "name": "Carahell (Weyermann)",
+    "type": "Grain",
+    "grams": 700.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Carahell (Weyermann)",
+  "labels": [
+   "batch66 Way to Amarillo, v2.jpg"
+  ]
+ },
+ {
+  "batch": 67,
+  "name": "Red X IPA",
+  "full_name": "#67 Red X IPA",
+  "date_display": "07-01-2023",
+  "date_iso": "2023-01-07",
+  "style": "Red IPA",
+  "batch_size_display": "22.00 L",
+  "batch_size_l": 22.0,
+  "abv": 5.7,
+  "ebc": 28.1,
+  "ibu": 24.9,
+  "hops": [
+   {
+    "name": "Chinook",
+    "grams": 85.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Wakatu (Hallertau Aroma)",
+    "grams": 70.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "BEST Red X (BESTMALZ)",
+    "type": "Grain",
+    "grams": 5000.0
+   },
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 300.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Pale Ale (Dingemans)",
+  "labels": [
+   "batch67 Little Red Corvette.jpg"
+  ]
+ },
+ {
+  "batch": 68,
+  "name": "Club Tropicana (NEIPA)",
+  "full_name": "#68 Club Tropicana (NEIPA)",
+  "date_display": "14-07-2023",
+  "date_iso": "2023-07-14",
+  "style": "Specialty IPA",
+  "batch_size_display": "22.00 L",
+  "batch_size_l": 22.0,
+  "abv": 5.6,
+  "ebc": 6.0,
+  "ibu": 10.4,
+  "hops": [
+   {
+    "name": "Amarillo",
+    "grams": 100.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 100.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Centennial",
+    "grams": 50.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Rice Hulls",
+    "type": "Adjunct",
+    "grams": 100.0
+   },
+   {
+    "name": "Pilsen (Dingemans)",
+    "type": "Grain",
+    "grams": 3800.0
+   },
+   {
+    "name": "PlatinumSwaen©Wheat Flakes",
+    "type": "Grain",
+    "grams": 600.0
+   },
+   {
+    "name": "Pale Wheat (Dingemans)",
+    "type": "Grain",
+    "grams": 530.0
+   },
+   {
+    "name": "Cara-Pils/Dextrine",
+    "type": "Grain",
+    "grams": 400.0
+   },
+   {
+    "name": "Oats, Malted (Thomas Fawcett)",
+    "type": "Grain",
+    "grams": 200.0
+   }
+  ],
+  "yeasts": [
+   "London Ale III"
+  ],
+  "source_file": "Oats, Malted (Thomas Fawcett)",
+  "labels": [
+   "batch68 Club Tropicana.jpg"
+  ]
+ },
+ {
+  "batch": 69,
+  "name": "Pretty Fly for a Weizen Guy (Tropical Ralphie clone)",
+  "full_name": "#69 Pretty Fly for a Weizen Guy (Tropical Ralphie clone)",
+  "date_display": "03-02-2019",
+  "date_iso": "2019-02-03",
+  "style": "Weizen",
+  "batch_size_display": "20.00 L",
+  "batch_size_l": 20.0,
+  "abv": 5.4,
+  "ebc": 7.8,
+  "ibu": 11.6,
+  "hops": [
+   {
+    "name": "Herkules",
+    "grams": 25.0,
+    "uses": [
+     "Aroma",
+     "Boil"
+    ]
+   },
+   {
+    "name": "Hallertau Blanc",
+    "grams": 73.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Amarillo",
+    "grams": 40.0,
+    "uses": [
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Nelson Sauvin",
+    "grams": 40.0,
+    "uses": [
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Wheat Malt, Ger",
+    "type": "Grain",
+    "grams": 1700.0
+   },
+   {
+    "name": "Swaen©Pilsner",
+    "type": "Grain",
+    "grams": 1300.0
+   },
+   {
+    "name": "Swaen©Pilsner",
+    "type": "Grain",
+    "grams": 1100.0
+   },
+   {
+    "name": "PlatinumSwaen©Oat Flakes",
+    "type": "Grain",
+    "grams": 400.0
+   },
+   {
+    "name": "Caraamber (Weyermann)",
+    "type": "Grain",
+    "grams": 80.0
+   }
+  ],
+  "yeasts": [
+   "Weihenstephan Weizen"
+  ],
+  "source_file": "Caraamber (Weyermann)",
+  "labels": [
+   "batch69 Pretty Fly for a Weizen Guy.jpg"
+  ]
+ },
+ {
+  "batch": 70,
+  "name": "Hop To Be Square IPA",
+  "full_name": "#70 Hop To Be Square IPA",
+  "date_display": "30-09-2023",
+  "date_iso": "2023-09-30",
+  "style": "American IPA",
+  "batch_size_display": "22.00 L",
+  "batch_size_l": 22.0,
+  "abv": 6.1,
+  "ebc": 13.8,
+  "ibu": 34.7,
+  "hops": [
+   {
+    "name": "Herkules",
+    "grams": 15.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 90.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Chinook",
+    "grams": 60.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Nelson Sauvin",
+    "grams": 60.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pilsner (Weyermann)",
+    "type": "Grain",
+    "grams": 5000.0
+   },
+   {
+    "name": "Cara-Pils/Dextrine",
+    "type": "Grain",
+    "grams": 500.0
+   },
+   {
+    "name": "Caraamber (Weyermann)",
+    "type": "Grain",
+    "grams": 500.0
+   }
+  ],
+  "yeasts": [
+   "US West Coast"
+  ],
+  "source_file": "Caraamber (Weyermann)",
+  "labels": [
+   "batch70 Hop to be Square.jpg"
+  ]
+ },
+ {
+  "batch": 71,
+  "name": "Pastorale Pale Ale",
+  "full_name": "#71 Pastorale Pale Ale",
+  "date_display": "05-01-2024",
+  "date_iso": "2024-01-05",
+  "style": "American Pale Ale",
+  "batch_size_display": "23.00 L",
+  "batch_size_l": 23.0,
+  "abv": 5.2,
+  "ebc": 6.6,
+  "ibu": 31.4,
+  "hops": [
+   {
+    "name": "Herkules",
+    "grams": 20.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 80.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Mosaic (HBC 369)",
+    "grams": 80.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Swaen©Pilsner",
+    "type": "Grain",
+    "grams": 4300.0
+   },
+   {
+    "name": "Pale Wheat (Dingemans)",
+    "type": "Grain",
+    "grams": 1000.0
+   },
+   {
+    "name": "PlatinumSwaen©Oat Flakes",
+    "type": "Grain",
+    "grams": 300.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "PlatinumSwaen©Oat Flakes",
+  "labels": [
+   "batch71 Pastorale Pale Ale.jpg"
+  ]
+ },
+ {
+  "batch": 72,
+  "name": "White Wedding, v4",
+  "full_name": "#72 White Wedding, v4",
+  "date_display": "29-04-2024",
+  "date_iso": "2024-04-29",
+  "style": "Witbier",
+  "batch_size_display": "22.00 L",
+  "batch_size_l": 22.0,
+  "abv": 5.2,
+  "ebc": 5.9,
+  "ibu": 12.3,
+  "hops": [
+   {
+    "name": "Perle",
+    "grams": 38.0,
+    "uses": [
+     "Aroma",
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Wheat (Dingemans)",
+    "type": "Grain",
+    "grams": 2300.0
+   },
+   {
+    "name": "Pilsen (Dingemans)",
+    "type": "Grain",
+    "grams": 2300.0
+   },
+   {
+    "name": "Wheat, Flaked",
+    "type": "Grain",
+    "grams": 400.0
+   }
+  ],
+  "yeasts": [
+   "Belgian Witbier"
+  ],
+  "source_file": "Wheat, Flaked",
+  "labels": [
+   "batch72 White Wedding - v4.jpg"
+  ]
+ },
+ {
+  "batch": 73,
+  "name": "Op Fietse IPA",
+  "full_name": "#73 Op Fietse IPA",
+  "date_display": "16-05-2024",
+  "date_iso": "2024-05-16",
+  "style": "American Pale Ale",
+  "batch_size_display": "22.00 L",
+  "batch_size_l": 22.0,
+  "abv": 5.5,
+  "ebc": 15.6,
+  "ibu": 29.4,
+  "hops": [
+   {
+    "name": "Hallertau Blanc",
+    "grams": 35.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Huell Melon",
+    "grams": 70.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Mosaic (HBC 369)",
+    "grams": 40.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Chinook",
+    "grams": 40.0,
+    "uses": [
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 5000.0
+   },
+   {
+    "name": "Caraamber (Weyermann)",
+    "type": "Grain",
+    "grams": 420.0
+   },
+   {
+    "name": "Carahell (Weyermann)",
+    "type": "Grain",
+    "grams": 100.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Carahell (Weyermann)",
+  "labels": [
+   "batch73 Op Fietse.jpg"
+  ]
+ },
+ {
+  "batch": 74,
+  "name": "Cliff Moher & The Burren (Black IPA)",
+  "full_name": "#74 Cliff Moher & The Burren (Black IPA)",
+  "date_display": "26-09-2024",
+  "date_iso": "2024-09-26",
+  "style": "Black IPA",
+  "batch_size_display": "22.00 L",
+  "batch_size_l": 22.0,
+  "abv": 6.0,
+  "ebc": 85.4,
+  "ibu": 35.9,
+  "hops": [
+   {
+    "name": "Herkules",
+    "grams": 20.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Cascade",
+    "grams": 60.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Huell Melon",
+    "grams": 60.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 36.0,
+    "uses": [
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Swaen©Pilsner",
+    "type": "Grain",
+    "grams": 5000.0
+   },
+   {
+    "name": "GoldSwaen©Munich Dark",
+    "type": "Grain",
+    "grams": 500.0
+   },
+   {
+    "name": "Caraamber (Weyermann)",
+    "type": "Grain",
+    "grams": 400.0
+   },
+   {
+    "name": "Carafa III (Weyermann)",
+    "type": "Grain",
+    "grams": 400.0
+   },
+   {
+    "name": "BlackSwaen©Chocolate B",
+    "type": "Grain",
+    "grams": 100.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "BlackSwaen©Chocolate B",
+  "labels": [
+   "batch74 Cliff Moher & The Burren IPA.jpg"
+  ]
+ },
+ {
+  "batch": 75,
+  "name": "Is the the Way to Amarillo IPA, v3",
+  "full_name": "#75 Is the the Way to Amarillo IPA, v3",
+  "date_display": "10-10-2024",
+  "date_iso": "2024-10-10",
+  "style": "American IPA",
+  "batch_size_display": "23.00 L",
+  "batch_size_l": 23.0,
+  "abv": 5.9,
+  "ebc": 15.1,
+  "ibu": 29.2,
+  "hops": [
+   {
+    "name": "Centennial",
+    "grams": 45.0,
+    "uses": [
+     "Aroma",
+     "Boil"
+    ]
+   },
+   {
+    "name": "Amarillo",
+    "grams": 75.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Cascade",
+    "grams": 60.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 35.0,
+    "uses": [
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 5000.0
+   },
+   {
+    "name": "Swaen©Pilsner",
+    "type": "Grain",
+    "grams": 800.0
+   },
+   {
+    "name": "Caraamber (Weyermann)",
+    "type": "Grain",
+    "grams": 400.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Caraamber (Weyermann)",
+  "labels": [
+   "batch75 Way to Amarillo, v3.jpg"
+  ]
+ },
+ {
+  "batch": 76,
+  "name": "Black Betty",
+  "full_name": "#76 Black Betty",
+  "date_display": "18-12-2024",
+  "date_iso": "2024-12-18",
+  "style": "Imperial Stout",
+  "batch_size_display": "22.00 L",
+  "batch_size_l": 22.0,
+  "abv": 7.9,
+  "ebc": 93.3,
+  "ibu": 40.6,
+  "hops": [
+   {
+    "name": "Perle",
+    "grams": 40.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Centennial",
+    "grams": 35.0,
+    "uses": [
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 6500.0
+   },
+   {
+    "name": "Oats, Flaked",
+    "type": "Grain",
+    "grams": 500.0
+   },
+   {
+    "name": "Swaen©Munich Dark",
+    "type": "Grain",
+    "grams": 430.0
+   },
+   {
+    "name": "MRoost 900 MD",
+    "type": "Grain",
+    "grams": 300.0
+   },
+   {
+    "name": "Roasted Barley (Thomas Fawcett)",
+    "type": "Grain",
+    "grams": 300.0
+   },
+   {
+    "name": "Caraamber (Weyermann)",
+    "type": "Grain",
+    "grams": 200.0
+   },
+   {
+    "name": "Pale Chocolate Malt",
+    "type": "Grain",
+    "grams": 180.0
+   },
+   {
+    "name": "BlackSwaen©Chocolate B",
+    "type": "Grain",
+    "grams": 110.0
+   },
+   {
+    "name": "BEST Caramel®Hell",
+    "type": "Grain",
+    "grams": 100.0
+   },
+   {
+    "name": "Special B (Dingemans)",
+    "type": "Grain",
+    "grams": 70.0
+   },
+   {
+    "name": "Milk Sugar (Lactose)",
+    "type": "Sugar",
+    "grams": 250.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Milk Sugar (Lactose)",
+  "labels": [
+   "batch76 Black Betty.jpg"
+  ]
+ },
+ {
+  "batch": 77,
+  "name": "Whiter Shade of Pale Ale, v2",
+  "full_name": "#77 Whiter Shade of Pale Ale, v2",
+  "date_display": "10-02-2025",
+  "date_iso": "2025-02-10",
+  "style": "American Pale Ale",
+  "batch_size_display": "22.00 L",
+  "batch_size_l": 22.0,
+  "abv": 5.2,
+  "ebc": 8.8,
+  "ibu": 20.3,
+  "hops": [
+   {
+    "name": "Centennial",
+    "grams": 20.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 65.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Mosaic (HBC 369)",
+    "grams": 65.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 4000.0
+   },
+   {
+    "name": "Pale Wheat (Dingemans)",
+    "type": "Grain",
+    "grams": 1000.0
+   },
+   {
+    "name": "PlatinumSwaen©Oat Flakes",
+    "type": "Grain",
+    "grams": 280.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "PlatinumSwaen©Oat Flakes",
+  "labels": [
+   "batch77 Whiter Shade of Pale Ale.jpg"
+  ]
+ },
+ {
+  "batch": 78,
+  "name": "Rye of the Tiger",
+  "full_name": "#78 Rye of the Tiger",
+  "date_display": "23-04-2025",
+  "date_iso": "2025-04-23",
+  "style": "Rye IPA",
+  "batch_size_display": "22.00 L",
+  "batch_size_l": 22.0,
+  "abv": 6.7,
+  "ebc": 34.4,
+  "ibu": 28.3,
+  "hops": [
+   {
+    "name": "Calypso",
+    "grams": 100.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Cascade",
+    "grams": 95.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Mosaic (HBC 369)",
+    "grams": 25.0,
+    "uses": [
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Rice Hulls",
+    "type": "Adjunct",
+    "grams": 100.0
+   },
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 5000.0
+   },
+   {
+    "name": "Rye Malt (Weyermann)",
+    "type": "Grain",
+    "grams": 1000.0
+   },
+   {
+    "name": "Pilsner (Weyermann)",
+    "type": "Grain",
+    "grams": 500.0
+   },
+   {
+    "name": "Caramunich I (Weyermann)",
+    "type": "Grain",
+    "grams": 250.0
+   },
+   {
+    "name": "Melanoidin (Weyermann)",
+    "type": "Grain",
+    "grams": 200.0
+   },
+   {
+    "name": "MRoost 900 MD",
+    "type": "Grain",
+    "grams": 150.0
+   }
+  ],
+  "yeasts": [
+   "American West Coast Ale"
+  ],
+  "source_file": "MRoost 900 MD",
+  "labels": [
+   "batch78 Rye of the Tiger.jpg"
+  ]
+ },
+ {
+  "batch": 79,
+  "name": "Voyage Voyage",
+  "full_name": "#79 Voyage Voyage",
+  "date_display": "22-10-2025",
+  "date_iso": "2025-10-22",
+  "style": "American Pale Ale",
+  "batch_size_display": "23.00 L",
+  "batch_size_l": 23.0,
+  "abv": 5.0,
+  "ebc": 12.8,
+  "ibu": 25.2,
+  "hops": [
+   {
+    "name": "Calypso",
+    "grams": 12.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Citra",
+    "grams": 28.0,
+    "uses": [
+     "Aroma"
+    ]
+   },
+   {
+    "name": "Mosaic (HBC 369)",
+    "grams": 82.0,
+    "uses": [
+     "Aroma",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Cascade",
+    "grams": 38.0,
+    "uses": [
+     "Dry Hop"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Swaen©Pilsner",
+    "type": "Grain",
+    "grams": 4600.0
+   },
+   {
+    "name": "Carared (Weyermann)",
+    "type": "Grain",
+    "grams": 400.0
+   },
+   {
+    "name": "PlatinumSwaen©Oat Flakes",
+    "type": "Grain",
+    "grams": 300.0
+   },
+   {
+    "name": "Caraamber (Weyermann)",
+    "type": "Grain",
+    "grams": 200.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Caraamber (Weyermann)",
+  "labels": [
+   "batch79 Voyage Voyage.jpg"
+  ]
+ },
+ {
+  "batch": 80,
+  "name": "Victory Boogie Woogie - Yuzu Saison",
+  "full_name": "#80 Victory Boogie Woogie - Yuzu Saison",
+  "date_display": "06-02-2026",
+  "date_iso": "2026-02-06",
+  "style": "Saison",
+  "batch_size_display": "20.00 L",
+  "batch_size_l": 20.0,
+  "abv": 5.5,
+  "ebc": 10.3,
+  "ibu": 26.5,
+  "hops": [
+   {
+    "name": "East Kent Goldings (EKG)",
+    "grams": 50.0,
+    "uses": [
+     "Aroma",
+     "Boil"
+    ]
+   },
+   {
+    "name": "Styrian Goldings",
+    "grams": 40.0,
+    "uses": [
+     "Aroma",
+     "Boil"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pilsen (Dingemans)",
+    "type": "Grain",
+    "grams": 4000.0
+   },
+   {
+    "name": "Pale Wheat (Dingemans)",
+    "type": "Grain",
+    "grams": 300.0
+   },
+   {
+    "name": "Caramunich I (Weyermann)",
+    "type": "Grain",
+    "grams": 200.0
+   }
+  ],
+  "yeasts": [
+   "Belgian Saison"
+  ],
+  "source_file": "Caramunich I (Weyermann)",
+  "labels": [
+   "batch80 Victory Boogie Woogie.jpg"
+  ]
+ },
+ {
+  "batch": 81,
+  "name": "Gimme Hop Jo'anna",
+  "full_name": "#81 Gimme Hop Jo'anna",
+  "date_display": "24-02-2026",
+  "date_iso": "2026-02-24",
+  "style": "American Pale Ale",
+  "batch_size_display": "23.00 L",
+  "batch_size_l": 23.0,
+  "abv": 5.0,
+  "ebc": 9.7,
+  "ibu": 25.9,
+  "hops": [
+   {
+    "name": "East Kent Goldings (EKG)",
+    "grams": 20.0,
+    "uses": [
+     "Boil"
+    ]
+   },
+   {
+    "name": "Mosaic (HBC 369)",
+    "grams": 115.0,
+    "uses": [
+     "Aroma",
+     "Boil",
+     "Dry Hop"
+    ]
+   },
+   {
+    "name": "Amarillo",
+    "grams": 22.0,
+    "uses": [
+     "Aroma"
+    ]
+   }
+  ],
+  "fermentables": [
+   {
+    "name": "Pale Ale (Dingemans)",
+    "type": "Grain",
+    "grams": 5000.0
+   },
+   {
+    "name": "Pale Wheat (Dingemans)",
+    "type": "Grain",
+    "grams": 400.0
+   }
+  ],
+  "yeasts": [
+   "Safale American"
+  ],
+  "source_file": "Pale Wheat (Dingemans)",
+  "labels": [
+   "batch81 Gimme Hop Jo'Anna v3.jpg"
+  ]
+ }
+]

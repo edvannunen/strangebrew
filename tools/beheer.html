@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strange Brew — Beheer brouwsels</title>
+<style>
+  :root{
+    --ink:#15161A; --char:#212327; --char-2:#2A2D33; --line:rgba(241,230,201,0.14);
+    --parchment:#F1E6C9; --navy:#1F3049;
+    --gold:#F4B942; --amber:#F0921F; --orange:#EE7B2E; --red:#D8432A;
+    --cream:#EFE6D6; --cream-dim:#ABA294; --cream-dim2:#7C7566;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--ink); color:var(--cream);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    line-height:1.5; padding:0 0 80px;
+  }
+  header{
+    background:linear-gradient(100deg, rgba(244,185,66,0.12), rgba(216,67,42,0.08));
+    border-bottom:1px solid var(--line);
+    padding:28px 24px;
+  }
+  header h1{
+    margin:0; font-size:26px; letter-spacing:0.01em;
+    background:linear-gradient(90deg, var(--gold), var(--orange) 55%, var(--red));
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  header p{ margin:8px 0 0; color:var(--cream-dim); font-size:14px; max-width:70ch; }
+  main{ max-width:880px; margin:0 auto; padding:0 24px; }
+  section{
+    background:var(--char); border:1px solid var(--line); border-radius:10px;
+    padding:24px; margin-top:24px;
+  }
+  h2{ font-size:18px; margin:0 0 6px; color:var(--gold); }
+  .sub{ font-size:13px; color:var(--cream-dim-2, var(--cream-dim)); margin:0 0 18px; }
+  label{ display:block; font-size:12px; text-transform:uppercase; letter-spacing:0.05em; color:var(--cream-dim); margin-bottom:5px; }
+  input[type=text], input[type=number], input[type=date], select{
+    width:100%; background:var(--char-2); border:1px solid var(--line); border-radius:6px;
+    color:var(--cream); padding:9px 10px; font-size:14px; font-family:inherit;
+  }
+  input:focus, select:focus{ outline:2px solid var(--gold); outline-offset:1px; }
+  .row{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+  .row3{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-bottom:14px; }
+  .field{ margin-bottom:14px; }
+  button{
+    font-family:inherit; cursor:pointer; border:none; border-radius:6px;
+    padding:9px 16px; font-size:13px; font-weight:600;
+  }
+  .btn-primary{ background:linear-gradient(100deg, var(--gold), var(--orange)); color:#241705; }
+  .btn-primary:hover{ filter:brightness(1.08); }
+  .btn-ghost{ background:var(--char-2); color:var(--cream); border:1px solid var(--line); }
+  .btn-ghost:hover{ background:#33363d; }
+  .btn-danger{ background:rgba(216,67,42,0.15); color:#ff9d84; border:1px solid rgba(216,67,42,0.35); }
+  .btn-small{ padding:5px 10px; font-size:12px; }
+
+  .list-rows{ display:flex; flex-direction:column; gap:8px; margin-bottom:10px; }
+  .list-row{ display:grid; grid-template-columns:1fr 110px auto; gap:8px; align-items:center; }
+  .list-row.single{ grid-template-columns:1fr auto; }
+  .list-row input{ margin:0; }
+
+  table{ width:100%; border-collapse:collapse; font-size:13px; }
+  th, td{ text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); }
+  th{ color:var(--cream-dim); font-weight:600; text-transform:uppercase; font-size:11px; letter-spacing:0.05em; }
+  td.num{ font-family:"IBM Plex Mono", monospace; color:var(--cream-dim); }
+
+  .filebox{
+    border:1.5px dashed var(--line); border-radius:8px; padding:16px;
+    text-align:center; color:var(--cream-dim); font-size:13px;
+  }
+  .filebox input{ margin-top:8px; }
+
+  .thumbs{ display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
+  .thumb-item{ position:relative; width:84px; }
+  .thumb-item img{ width:84px; height:84px; object-fit:cover; border-radius:6px; border:1px solid var(--line); }
+  .thumb-item button{
+    position:absolute; top:-6px; right:-6px; width:20px; height:20px; border-radius:50%;
+    background:var(--red); color:#fff; font-size:12px; line-height:1; padding:0;
+  }
+
+  .msg{ font-size:13px; padding:10px 12px; border-radius:6px; margin-top:10px; }
+  .msg.ok{ background:rgba(72,187,120,0.12); color:#8fe3ab; border:1px solid rgba(72,187,120,0.3); }
+  .msg.err{ background:rgba(216,67,42,0.12); color:#ff9d84; border:1px solid rgba(216,67,42,0.3); }
+  .msg.info{ background:rgba(244,185,66,0.1); color:var(--gold); border:1px solid rgba(244,185,66,0.3); }
+
+  .download-item{
+    display:flex; align-items:center; justify-content:space-between;
+    background:var(--char-2); border:1px solid var(--line); border-radius:6px;
+    padding:10px 12px; margin-bottom:8px; font-size:13px; gap:12px; flex-wrap:wrap;
+  }
+  .download-item .name{ font-family:"IBM Plex Mono", monospace; font-size:12px; color:var(--cream-dim); word-break:break-all; }
+
+  .steps{ counter-reset:step; }
+  .steps > div{ display:flex; gap:12px; margin-bottom:10px; font-size:13.5px; color:var(--cream-dim); }
+  .steps > div::before{
+    counter-increment:step; content:counter(step);
+    flex-shrink:0; width:22px; height:22px; border-radius:50%;
+    background:var(--char-2); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    font-size:11px; font-weight:700; color:var(--gold);
+  }
+  code{ background:rgba(241,230,201,0.08); padding:1px 5px; border-radius:4px; font-size:12px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>STRANGE BREW — beheer brouwsels</h1>
+  <p>Voeg hier later nieuwe brouwsels toe aan je dashboard, zonder AI of code. Dit bestand werkt volledig offline in je browser — er wordt niets verstuurd of opgeslagen buiten dit tabblad.</p>
+</header>
+
+<main>
+
+  <section id="sec-instructies">
+    <h2>Hoe dit werkt</h2>
+    <p class="sub">In vier stappen naar een bijgewerkt dashboard</p>
+    <div class="steps">
+      <div>Laad hieronder je huidige <code>data.json</code> in (uit de map van je dashboard) zodat je verder bouwt op je bestaande brouwsels.</div>
+      <div>Vul het formulier in voor een nieuw brouwsel — eventueel automatisch ingevuld vanuit een BeerSmith XML-export.</div>
+      <div>Klik op "Toevoegen aan lijst" en herhaal voor zoveel brouwsels als je wilt.</div>
+      <div>Download de bijgewerkte <code>data.json</code> en de bijbehorende etiketten, en zet ze op de juiste plek (instructies staan onderaan bij het downloaden).</div>
+    </div>
+  </section>
+
+  <section id="sec-load">
+    <h2>1. Bestaande data.json laden</h2>
+    <p class="sub">Optioneel, maar wel zo handig — anders begin je met een lege lijst.</p>
+    <div class="filebox">
+      Kies het <code>data.json</code>-bestand uit je dashboardmap
+      <br><input type="file" id="load-json" accept=".json">
+    </div>
+    <div id="load-msg"></div>
+  </section>
+
+  <section id="sec-current">
+    <h2>Huidige brouwsels in de lijst</h2>
+    <p class="sub" id="current-count">Nog geen brouwsels geladen.</p>
+    <table id="current-table" style="display:none">
+      <thead><tr><th>Batch</th><th>Naam</th><th>Datum</th><th>Stijl</th><th></th></tr></thead>
+      <tbody id="current-tbody"></tbody>
+    </table>
+  </section>
+
+  <section id="sec-xml">
+    <h2>2a. Automatisch invullen vanuit BeerSmith XML</h2>
+    <p class="sub">Optioneel — je kunt ook alles hieronder met de hand invullen.</p>
+    <div class="filebox">
+      Kies een BeerSmith XML-exportbestand (bestandsnaam met batchnummer, bv. <code>#82 Nieuw Bier.xml</code>)
+      <br><input type="file" id="load-xml" accept=".xml">
+    </div>
+    <div id="xml-msg"></div>
+  </section>
+
+  <section id="sec-form">
+    <h2>2b. Gegevens brouwsel</h2>
+
+    <div class="row3">
+      <div class="field"><label>Batchnummer</label><input type="number" id="f-batch" min="1"></div>
+      <div class="field"><label>Brouwdatum</label><input type="date" id="f-date"></div>
+      <div class="field"><label>Bierstijl</label><input type="text" id="f-style" placeholder="bv. American IPA"></div>
+    </div>
+    <div class="field"><label>Naam van het bier</label><input type="text" id="f-name" placeholder="bv. Nieuwe Klassieker"></div>
+
+    <div class="row3">
+      <div class="field"><label>Batchgrootte (liter)</label><input type="number" step="0.1" id="f-batchsize"></div>
+      <div class="field"><label>Alcohol (% vol, geschat)</label><input type="number" step="0.1" id="f-abv"></div>
+      <div class="field"><label>Kleur (EBC, geschat)</label><input type="number" step="0.1" id="f-ebc"></div>
+    </div>
+    <div class="field" style="max-width:200px;"><label>Bitterheid (IBU, optioneel)</label><input type="number" step="0.1" id="f-ibu"></div>
+
+    <div class="field">
+      <label>Mout &amp; grondstoffen (exclusief water)</label>
+      <div class="list-rows" id="ferm-rows"></div>
+      <button class="btn-ghost btn-small" onclick="addFermRow()">+ grondstof toevoegen</button>
+    </div>
+
+    <div class="field">
+      <label>Hopgiften</label>
+      <div class="list-rows" id="hop-rows"></div>
+      <button class="btn-ghost btn-small" onclick="addHopRow()">+ hop toevoegen</button>
+    </div>
+
+    <div class="field">
+      <label>Gist</label>
+      <div class="list-rows" id="yeast-rows"></div>
+      <button class="btn-ghost btn-small" onclick="addYeastRow()">+ gist toevoegen</button>
+    </div>
+
+    <div class="field">
+      <label>Etiket(ten) — meerdere uploaden als er varianten zijn</label>
+      <div class="filebox">
+        <input type="file" id="f-images" accept="image/jpeg,image/png" multiple>
+        <div class="thumbs" id="image-thumbs"></div>
+      </div>
+    </div>
+
+    <button class="btn-primary" onclick="addRecipeToList()">Toevoegen aan lijst</button>
+    <div id="form-msg"></div>
+  </section>
+
+  <section id="sec-export">
+    <h2>3. Downloaden &amp; wegzetten</h2>
+    <p class="sub">Download het bijgewerkte databestand en de nieuwe etiketten, en zet ze op hun plek.</p>
+    <button class="btn-primary" onclick="downloadDataJson()">Download bijgewerkte data.json</button>
+    <div id="image-downloads" style="margin-top:16px;"></div>
+
+    <div class="steps" style="margin-top:20px;">
+      <div>Zet het gedownloade <code>data.json</code> in de hoofdmap van je dashboard, en overschrijf het oude bestand.</div>
+      <div>Zet elke gedownloade <b>origineel</b>-afbeelding in de map <code>images/labels/</code>.</div>
+      <div>Zet elke gedownloade <b>thumbnail</b>-afbeelding in de map <code>images/thumbs/</code>.</div>
+      <div>Open <code>index.html</code> — klaar. Geen herbouwen, geen code nodig.</div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+let RECIPES = [];
+let pendingFermRows = 0, pendingHopRows = 0, pendingYeastRows = 0;
+let uploadedImages = []; // {file, dataUrl}
+let pendingDownloads = []; // {filename, dataUrl}
+
+/* ---------------- Kleine helpers ---------------- */
+function esc(s){ return (s==null?"":String(s)).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+
+function isoToDisplay(iso){
+  if(!iso) return null;
+  const [y,m,d] = iso.split("-");
+  return `${d}-${m}-${y}`;
+}
+function displayToIso(disp){
+  // input type=date geeft al yyyy-mm-dd
+  return disp || null;
+}
+
+/* ---------------- Dynamische lijst-rijen ---------------- */
+function addFermRow(name="", grams=""){
+  const id = "ferm"+(pendingFermRows++);
+  const wrap = document.getElementById("ferm-rows");
+  const div = document.createElement("div");
+  div.className = "list-row"; div.id = id;
+  div.innerHTML = `
+    <input type="text" placeholder="bv. Pale Ale Mout" value="${esc(name)}" class="ferm-name">
+    <input type="number" placeholder="gram" value="${esc(grams)}" class="ferm-grams">
+    <button class="btn-danger btn-small" onclick="document.getElementById('${id}').remove()">×</button>`;
+  wrap.appendChild(div);
+}
+function addHopRow(name="", grams=""){
+  const id = "hop"+(pendingHopRows++);
+  const wrap = document.getElementById("hop-rows");
+  const div = document.createElement("div");
+  div.className = "list-row"; div.id = id;
+  div.innerHTML = `
+    <input type="text" placeholder="bv. Citra" value="${esc(name)}" class="hop-name">
+    <input type="number" placeholder="gram" value="${esc(grams)}" class="hop-grams">
+    <button class="btn-danger btn-small" onclick="document.getElementById('${id}').remove()">×</button>`;
+  wrap.appendChild(div);
+}
+function addYeastRow(name=""){
+  const id = "yeast"+(pendingYeastRows++);
+  const wrap = document.getElementById("yeast-rows");
+  const div = document.createElement("div");
+  div.className = "list-row single"; div.id = id;
+  div.innerHTML = `
+    <input type="text" placeholder="bv. Safale US-05" value="${esc(name)}" class="yeast-name">
+    <button class="btn-danger btn-small" onclick="document.getElementById('${id}').remove()">×</button>`;
+  wrap.appendChild(div);
+}
+function clearRows(containerId){ document.getElementById(containerId).innerHTML = ""; }
+
+// begin met 1 lege rij per lijst
+addFermRow(); addHopRow(); addYeastRow();
+
+/* ---------------- data.json laden ---------------- */
+document.getElementById("load-json").addEventListener("change", (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try{
+      const data = JSON.parse(reader.result);
+      if (!Array.isArray(data)) throw new Error("Bestand is geen lijst van brouwsels.");
+      RECIPES = data;
+      document.getElementById("load-msg").innerHTML = `<div class="msg ok">${RECIPES.length} bestaande brouwsels geladen.</div>`;
+      renderCurrentTable();
+    } catch(err){
+      document.getElementById("load-msg").innerHTML = `<div class="msg err">Kon bestand niet lezen: ${esc(err.message)}</div>`;
+    }
+  };
+  reader.readAsText(file, "utf-8");
+});
+
+function renderCurrentTable(){
+  const tbody = document.getElementById("current-tbody");
+  const table = document.getElementById("current-table");
+  const countEl = document.getElementById("current-count");
+  if (!RECIPES.length){
+    countEl.textContent = "Nog geen brouwsels geladen.";
+    table.style.display = "none";
+    return;
+  }
+  countEl.textContent = `${RECIPES.length} brouwsels in de lijst.`;
+  table.style.display = "";
+  const sorted = RECIPES.slice().sort((a,b)=>(a.batch??999)-(b.batch??999));
+  tbody.innerHTML = sorted.map(r => `
+    <tr>
+      <td class="num">#${String(r.batch).padStart(2,"0")}</td>
+      <td>${esc(r.name)}</td>
+      <td class="num">${esc(r.date_display||"—")}</td>
+      <td>${esc(r.style||"—")}</td>
+      <td><button class="btn-danger btn-small" onclick="removeRecipe(${r.batch})">verwijderen</button></td>
+    </tr>
+  `).join("");
+}
+function removeRecipe(batch){
+  if (!confirm(`Batch #${batch} uit de lijst verwijderen?`)) return;
+  RECIPES = RECIPES.filter(r => r.batch !== batch);
+  renderCurrentTable();
+}
+
+/* ---------------- BeerSmith XML parsen ---------------- */
+document.getElementById("load-xml").addEventListener("change", (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try{
+      const parsed = parseBeerSmithXml(reader.result, file.name);
+      fillFormFromParsed(parsed);
+      document.getElementById("xml-msg").innerHTML = `<div class="msg ok">Ingelezen: batch #${parsed.batch ?? "?"} — ${esc(parsed.name)}. Controleer de velden hieronder.</div>`;
+    } catch(err){
+      document.getElementById("xml-msg").innerHTML = `<div class="msg err">Kon XML niet verwerken: ${esc(err.message)}. Vul de velden handmatig in.</div>`;
+    }
+  };
+  // BeerSmith-exports zijn doorgaans ISO-8859-1
+  reader.readAsText(file, "iso-8859-1");
+});
+
+function xmlText(el, tag){
+  if (!el) return null;
+  const node = el.querySelector(tag);
+  return node && node.textContent ? node.textContent.trim() : null;
+}
+
+function parseBeerSmithXml(xmlString, filename){
+  const cleaned = xmlString.replace(/encoding="ISO-8859-1"/i, 'encoding="UTF-8"');
+  const doc = new DOMParser().parseFromString(cleaned, "text/xml");
+  if (doc.querySelector("parsererror")) throw new Error("ongeldig XML-bestand");
+  const rec = doc.querySelector("RECIPE");
+  if (!rec) throw new Error("geen <RECIPE> gevonden");
+
+  const nameRaw = xmlText(rec, "NAME") || "";
+  let batch = null;
+  const mFile = filename.match(/#?(\d+)/);
+  if (mFile) batch = parseInt(mFile[1]);
+  else {
+    const mName = nameRaw.match(/#(\d+)/);
+    if (mName) batch = parseInt(mName[1]);
+  }
+  const name = nameRaw.replace(/^\s*#\d+\s*/, "").trim();
+
+  // datum: "13 Mar 2017" -> iso
+  const MAANDEN = {Jan:"01",Feb:"02",Mar:"03",Apr:"04",May:"05",Jun:"06",Jul:"07",Aug:"08",Sep:"09",Oct:"10",Nov:"11",Dec:"12"};
+  let date_iso = null, date_display = null;
+  const dateRaw = xmlText(rec, "DATE");
+  if (dateRaw){
+    const m = dateRaw.match(/(\d{1,2})\s+([A-Za-z]{3})\s+(\d{4})/);
+    if (m && MAANDEN[m[2]]){
+      const dd = m[1].padStart(2,"0");
+      date_iso = `${m[3]}-${MAANDEN[m[2]]}-${dd}`;
+      date_display = `${dd}-${MAANDEN[m[2]]}-${m[3]}`;
+    }
+  }
+
+  const styleEl = rec.querySelector("STYLE");
+  const style = (styleEl && xmlText(styleEl, "NAME")) || "Onbekend";
+
+  const batch_size_display = xmlText(rec, "DISPLAY_BATCH_SIZE");
+  const batchSizeRaw = xmlText(rec, "BATCH_SIZE");
+  const batch_size_l = batchSizeRaw ? Math.round(parseFloat(batchSizeRaw)*100)/100 : null;
+
+  let abv = null;
+  const abvRaw = xmlText(rec, "EST_ABV");
+  if (abvRaw){ const m = abvRaw.match(/([\d.]+)/); if (m) abv = parseFloat(m[1]); }
+
+  let ebc = null;
+  const colorRaw = xmlText(rec, "EST_COLOR");
+  if (colorRaw){
+    let m = colorRaw.match(/^([\d.]+)\s*EBC$/i);
+    if (m) ebc = Math.round(parseFloat(m[1])*10)/10;
+    else {
+      m = colorRaw.match(/^([\d.]+)\s*SRM$/i);
+      if (m) ebc = Math.round(parseFloat(m[1])*1.97*10)/10;
+      else {
+        const v = parseFloat(colorRaw);
+        if (!isNaN(v)) ebc = Math.round(v*1.97*10)/10;
+      }
+    }
+  }
+
+  let ibu = null;
+  const ibuRaw = xmlText(rec, "IBU");
+  if (ibuRaw){ const m = ibuRaw.match(/([\d.]+)/); if (m) ibu = parseFloat(m[1]); }
+
+  // hops groeperen op naam
+  const hopsMap = {};
+  const hopsOrder = [];
+  rec.querySelectorAll("HOPS > HOP").forEach(h => {
+    const hname = xmlText(h, "NAME") || "?";
+    const amtRaw = xmlText(h, "AMOUNT");
+    const grams = amtRaw ? parseFloat(amtRaw)*1000 : 0;
+    if (!hopsMap[hname]){ hopsMap[hname] = 0; hopsOrder.push(hname); }
+    hopsMap[hname] += grams;
+  });
+  const hops = hopsOrder.map(n => ({name:n, grams: Math.round(hopsMap[n]*10)/10, uses:[]}));
+
+  // fermentables, exclusief water
+  const fermentables = [];
+  rec.querySelectorAll("FERMENTABLES > FERMENTABLE").forEach(f => {
+    const fname = xmlText(f, "NAME") || "?";
+    const ftype = xmlText(f, "TYPE") || "";
+    if (ftype.toLowerCase() === "water" || fname.toLowerCase().includes("water")) return;
+    const amtRaw = xmlText(f, "AMOUNT");
+    const grams = amtRaw ? Math.round(parseFloat(amtRaw)*1000*10)/10 : null;
+    fermentables.push({name: fname, type: ftype, grams});
+  });
+
+  // gist, uniek op naam
+  const yeasts = [];
+  rec.querySelectorAll("YEASTS > YEAST").forEach(y => {
+    const yname = xmlText(y, "NAME");
+    if (yname && !yeasts.includes(yname)) yeasts.push(yname);
+  });
+
+  return { batch, name, date_display, date_iso, style, batch_size_display, batch_size_l, abv, ebc, ibu, hops, fermentables, yeasts };
+}
+
+function fillFormFromParsed(p){
+  document.getElementById("f-batch").value = p.batch ?? "";
+  document.getElementById("f-date").value = p.date_iso ?? "";
+  document.getElementById("f-style").value = p.style ?? "";
+  document.getElementById("f-name").value = p.name ?? "";
+  document.getElementById("f-batchsize").value = p.batch_size_l ?? "";
+  document.getElementById("f-abv").value = p.abv ?? "";
+  document.getElementById("f-ebc").value = p.ebc ?? "";
+  document.getElementById("f-ibu").value = p.ibu ?? "";
+
+  clearRows("ferm-rows"); pendingFermRows=0;
+  (p.fermentables.length ? p.fermentables : [{name:"",grams:""}]).forEach(f => addFermRow(f.name, f.grams ?? ""));
+
+  clearRows("hop-rows"); pendingHopRows=0;
+  (p.hops.length ? p.hops : [{name:"",grams:""}]).forEach(h => addHopRow(h.name, h.grams ?? ""));
+
+  clearRows("yeast-rows"); pendingYeastRows=0;
+  (p.yeasts.length ? p.yeasts : [""]).forEach(y => addYeastRow(y));
+}
+
+/* ---------------- Afbeeldingen ---------------- */
+document.getElementById("f-images").addEventListener("change", (e) => {
+  uploadedImages = [];
+  const files = Array.from(e.target.files);
+  const thumbsWrap = document.getElementById("image-thumbs");
+  thumbsWrap.innerHTML = "";
+  files.forEach((file, idx) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      uploadedImages.push({file, dataUrl: reader.result});
+      const div = document.createElement("div");
+      div.className = "thumb-item";
+      div.innerHTML = `<img src="${reader.result}" alt="">`;
+      thumbsWrap.appendChild(div);
+    };
+    reader.readAsDataURL(file);
+  });
+});
+
+function makeThumbnail(dataUrl, maxSize=420, quality=0.78){
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.onload = () => {
+      let {width, height} = img;
+      const scale = Math.min(1, maxSize / Math.max(width, height));
+      width = Math.round(width*scale); height = Math.round(height*scale);
+      const canvas = document.createElement("canvas");
+      canvas.width = width; canvas.height = height;
+      canvas.getContext("2d").drawImage(img, 0, 0, width, height);
+      resolve(canvas.toDataURL("image/jpeg", quality));
+    };
+    img.src = dataUrl;
+  });
+}
+
+function safeFileBase(batch, name){
+  const clean = (name||"brouwsel").replace(/[\\/:*?"<>|#]/g, "").trim();
+  return `batch${batch} ${clean}`;
+}
+
+/* ---------------- Toevoegen aan lijst ---------------- */
+async function addRecipeToList(){
+  const msgEl = document.getElementById("form-msg");
+  const batch = parseInt(document.getElementById("f-batch").value);
+  const name = document.getElementById("f-name").value.trim();
+  if (!batch || !name){
+    msgEl.innerHTML = `<div class="msg err">Batchnummer en naam zijn verplicht.</div>`;
+    return;
+  }
+  if (RECIPES.some(r => r.batch === batch)){
+    if (!confirm(`Batch #${batch} bestaat al in de lijst. Overschrijven?`)) return;
+    RECIPES = RECIPES.filter(r => r.batch !== batch);
+  }
+
+  const dateIso = document.getElementById("f-date").value || null;
+  const dateDisplay = isoToDisplay(dateIso);
+
+  const fermentables = [...document.querySelectorAll("#ferm-rows .list-row")].map(row => ({
+    name: row.querySelector(".ferm-name").value.trim(),
+    type: "Grain",
+    grams: row.querySelector(".ferm-grams").value ? parseFloat(row.querySelector(".ferm-grams").value) : null
+  })).filter(f => f.name);
+
+  const hops = [...document.querySelectorAll("#hop-rows .list-row")].map(row => ({
+    name: row.querySelector(".hop-name").value.trim(),
+    grams: row.querySelector(".hop-grams").value ? parseFloat(row.querySelector(".hop-grams").value) : null,
+    uses: []
+  })).filter(h => h.name);
+
+  const yeasts = [...document.querySelectorAll("#yeast-rows .list-row")].map(row => row.querySelector(".yeast-name").value.trim()).filter(Boolean);
+
+  const abvRaw = document.getElementById("f-abv").value;
+  const ebcRaw = document.getElementById("f-ebc").value;
+  const ibuRaw = document.getElementById("f-ibu").value;
+  const sizeRaw = document.getElementById("f-batchsize").value;
+
+  // labelbestanden genereren
+  const labels = [];
+  for (let i=0; i<uploadedImages.length; i++){
+    const base = safeFileBase(batch, name) + (uploadedImages.length>1 ? ` - v${i+1}` : "");
+    const filename = base + ".jpg";
+    labels.push(filename);
+    const thumbUrl = await makeThumbnail(uploadedImages[i].dataUrl);
+    pendingDownloads.push({filename, dataUrl: uploadedImages[i].dataUrl, target:"images/labels/"});
+    pendingDownloads.push({filename, dataUrl: thumbUrl, target:"images/thumbs/"});
+  }
+
+  const recipe = {
+    batch,
+    name,
+    full_name: `#${batch} ${name}`,
+    date_display: dateDisplay,
+    date_iso: dateIso,
+    style: document.getElementById("f-style").value.trim() || "Onbekend",
+    batch_size_display: sizeRaw ? `${parseFloat(sizeRaw).toFixed(2)} L` : null,
+    batch_size_l: sizeRaw ? parseFloat(sizeRaw) : null,
+    abv: abvRaw ? parseFloat(abvRaw) : null,
+    ebc: ebcRaw ? parseFloat(ebcRaw) : null,
+    ibu: ibuRaw ? parseFloat(ibuRaw) : null,
+    hops,
+    fermentables,
+    yeasts,
+    source_file: "handmatig toegevoegd via beheertool",
+    labels
+  };
+
+  RECIPES.push(recipe);
+  renderCurrentTable();
+  renderDownloadList();
+  msgEl.innerHTML = `<div class="msg ok">Batch #${batch} — ${esc(name)} toegevoegd aan de lijst. Vul hieronder eventueel nog een brouwsel in, of ga naar stap 3 om te downloaden.</div>`;
+
+  // formulier resetten voor het volgende brouwsel
+  document.getElementById("f-batch").value = "";
+  document.getElementById("f-date").value = "";
+  document.getElementById("f-style").value = "";
+  document.getElementById("f-name").value = "";
+  document.getElementById("f-batchsize").value = "";
+  document.getElementById("f-abv").value = "";
+  document.getElementById("f-ebc").value = "";
+  document.getElementById("f-ibu").value = "";
+  clearRows("ferm-rows"); pendingFermRows=0; addFermRow();
+  clearRows("hop-rows"); pendingHopRows=0; addHopRow();
+  clearRows("yeast-rows"); pendingYeastRows=0; addYeastRow();
+  document.getElementById("f-images").value = "";
+  document.getElementById("image-thumbs").innerHTML = "";
+  uploadedImages = [];
+}
+
+/* ---------------- Downloaden ---------------- */
+function downloadDataJson(){
+  const sorted = RECIPES.slice().sort((a,b)=>(a.batch??999)-(b.batch??999));
+  const blob = new Blob([JSON.stringify(sorted, null, 1)], {type:"application/json"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = "data.json";
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function renderDownloadList(){
+  const wrap = document.getElementById("image-downloads");
+  if (!pendingDownloads.length){ wrap.innerHTML = ""; return; }
+  wrap.innerHTML = `<p class="sub" style="margin-top:0;">Nieuwe afbeeldingen om te downloaden en weg te zetten:</p>` +
+    pendingDownloads.map((d, idx) => `
+      <div class="download-item">
+        <span class="name">${esc(d.target)}${esc(d.filename)}</span>
+        <button class="btn-ghost btn-small" onclick="downloadImage(${idx})">downloaden</button>
+      </div>
+    `).join("");
+}
+function downloadImage(idx){
+  const d = pendingDownloads[idx];
+  const a = document.createElement("a");
+  a.href = d.dataUrl; a.download = d.filename;
+  a.click();
+}
+</script>
+</body>
+</html>
