@@ -360,12 +360,11 @@ button.label-tile{ appearance:none; }
 }
 .modal-close:hover{ background:rgba(31,48,73,0.2); }
 
-.ticket-nav{ display:flex; justify-content:center; gap:14px; margin-top:16px; }
 .ticket-nav-btn{
-  width:38px; height:38px; border-radius:50%;
+  width:34px; height:34px; border-radius:50%; flex-shrink:0;
   border:1px solid rgba(31,48,73,0.25);
   background:rgba(31,48,73,0.06); color:var(--navy);
-  font-size:16px; line-height:1;
+  font-size:15px; line-height:1;
   display:flex; align-items:center; justify-content:center;
   cursor:pointer;
   transition:background 0.15s ease, opacity 0.15s ease;
@@ -388,7 +387,9 @@ button.label-tile{ appearance:none; }
 .ticket-thumb img{ max-width:100%; max-height:260px; width:auto; height:auto; object-fit:contain; display:block; border-radius:2px; }
 .ticket-thumb.placeholder{ padding:22px; }
 .ticket-thumb.placeholder img{ max-width:150px; max-height:110px; opacity:0.5; }
-.ticket-head-text{ min-width:0; text-align:center; }
+.ticket-head-text{ min-width:0; width:100%; text-align:center; }
+.ticket-title-row{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.ticket-title-row .ticket-title{ flex:1; min-width:0; }
 .ticket-batch{
   font-family:var(--font-mono); font-size:12px; font-weight:600;
   color:var(--flame-red); text-transform:uppercase; letter-spacing:0.06em;

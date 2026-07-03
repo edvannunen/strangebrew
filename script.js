@@ -521,12 +521,12 @@ function renderModalContent(r){
       ${thumbHtml}
       <div class="ticket-head-text">
         <div class="ticket-batch">Batch #${String(r.batch).padStart(2,"0")}</div>
-        <div class="ticket-title">${esc(r.name)}</div>
+        <div class="ticket-title-row">
+          <button class="ticket-nav-btn ticket-nav-prev" ${currentModalIndex <= 0 ? "disabled" : ""} aria-label="Vorig brouwsel">&#10094;</button>
+          <div class="ticket-title">${esc(r.name)}</div>
+          <button class="ticket-nav-btn ticket-nav-next" ${currentModalIndex >= RECIPES.length - 1 ? "disabled" : ""} aria-label="Volgend brouwsel">&#10095;</button>
+        </div>
         <div class="ticket-style">${esc(r.style)}</div>
-      </div>
-      <div class="ticket-nav">
-        <button class="ticket-nav-btn ticket-nav-prev" ${currentModalIndex <= 0 ? "disabled" : ""} aria-label="Vorig brouwsel">&#10094;</button>
-        <button class="ticket-nav-btn ticket-nav-next" ${currentModalIndex >= RECIPES.length - 1 ? "disabled" : ""} aria-label="Volgend brouwsel">&#10095;</button>
       </div>
     </div>
     <div class="ticket-body">
