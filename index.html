@@ -6,6 +6,9 @@
 <title>Strange Brew — Brouwdashboard</title>
 <meta name="description" content="Overzicht en tijdlijn van alle Strange Brew brouwsels sinds 2017.">
 <base href="/strangebrew/">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="shortcut icon" href="images/favicon.ico">
 
 <link rel="stylesheet" href="vendor/fonts/fonts.css">
 <link rel="stylesheet" href="styles.css">
@@ -85,7 +88,7 @@
 
       <article class="panel panel-wide" id="panel-hop">
         <header class="panel-head">
-          <h2>Hop van keuze</h2>
+          <h2>Hop</h2>
           <p class="panel-note">Meest gebruikte hopsoorten, op aantal brouwsels en totaalgewicht</p>
         </header>
         <div class="panel-body">
@@ -95,7 +98,7 @@
 
       <article class="panel" id="panel-gist">
         <header class="panel-head">
-          <h2>Gist in het vat</h2>
+          <h2>Gist</h2>
           <p class="panel-note">Meest gebruikte giststammen</p>
         </header>
         <div class="panel-body">
@@ -103,21 +106,21 @@
         </div>
       </article>
 
-    </div>
-
-    <article class="panel color-panel">
-      <header class="panel-head">
-        <h2>Kleurspreiding — EBC</h2>
-        <p class="panel-note">Elk bolletje is één brouwsel, geplaatst op zijn eigen kleurwaarde. Tik of hover voor details.</p>
-      </header>
-      <div class="ebc-scale-wrap">
-        <div class="ebc-scale" id="ebc-scale"></div>
-        <div class="ebc-scale-labels">
-          <span>bleek</span><span>goud</span><span>amber</span><span>bruin</span><span>zwart</span>
+      <article class="panel panel-wide color-panel">
+        <header class="panel-head">
+          <h2>Kleurspreiding — EBC</h2>
+          <p class="panel-note">Elk bolletje is één brouwsel, geplaatst op zijn eigen kleurwaarde. Tik of hover voor details.</p>
+        </header>
+        <div class="ebc-scale-wrap">
+          <div class="ebc-scale" id="ebc-scale"></div>
+          <div class="ebc-scale-labels">
+            <span>bleek</span><span>goud</span><span>amber</span><span>bruin</span><span>zwart</span>
+          </div>
+          <div class="ebc-dots" id="ebc-dots"></div>
         </div>
-        <div class="ebc-dots" id="ebc-dots"></div>
-      </div>
-    </article>
+      </article>
+
+    </div>
 
   </section>
 
@@ -144,10 +147,12 @@
 
 <!-- DETAILKAART / MODAL -->
 <div class="modal-overlay" id="modal-overlay" hidden>
+  <button class="modal-nav modal-nav-prev" id="modal-prev" aria-label="Vorig brouwsel">&#10094;</button>
   <div class="modal-card" id="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <button class="modal-close" id="modal-close" aria-label="Sluiten">&times;</button>
     <div class="modal-content" id="modal-content"><!-- gevuld via JS --></div>
   </div>
+  <button class="modal-nav modal-nav-next" id="modal-next" aria-label="Volgend brouwsel">&#10095;</button>
 </div>
 
 <script src="vendor/chart/chart.umd.min.js"></script>

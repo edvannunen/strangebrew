@@ -188,6 +188,12 @@
     </div>
 
     <div class="field">
+      <label>Overige ingrediënten</label>
+      <div class="list-rows" id="misc-rows"></div>
+      <button class="btn-ghost btn-small" onclick="addMiscRow()">+ ingrediënt toevoegen</button>
+    </div>
+
+    <div class="field">
       <label>Etiket(ten) — meerdere uploaden als er varianten zijn</label>
       <div class="filebox">
         <input type="file" id="f-images" accept="image/jpeg,image/png" multiple>
@@ -217,7 +223,7 @@
 
 <script>
 let RECIPES = [];
-let pendingFermRows = 0, pendingHopRows = 0, pendingYeastRows = 0;
+let pendingFermRows = 0, pendingHopRows = 0, pendingYeastRows = 0, pendingMiscRows = 0;
 let uploadedImages = []; // {file, dataUrl}
 let pendingDownloads = []; // {filename, dataUrl}
 
@@ -264,6 +270,16 @@ function addYeastRow(name=""){
   div.className = "list-row single"; div.id = id;
   div.innerHTML = `
     <input type="text" placeholder="bv. Safale US-05" value="${esc(name)}" class="yeast-name">
+    <button class="btn-danger btn-small" onclick="document.getElementById('${id}').remove()">×</button>`;
+  wrap.appendChild(div);
+}
+function addMiscRow(name=""){
+  const id = "misc"+(pendingMiscRows++);
+  const wrap = document.getElementById("misc-rows");
+  const div = document.createElement("div");
+  div.className = "list-row single"; div.id = id;
+  div.innerHTML = `
+    <input type="text" placeholder="bv. Kaneel" value="${esc(name)}" class="misc-name">
     <button class="btn-danger btn-small" onclick="document.getElementById('${id}').remove()">×</button>`;
   wrap.appendChild(div);
 }
@@ -433,7 +449,14 @@ function parseBeerSmithXml(xmlString, filename){
     if (yname && !yeasts.includes(yname)) yeasts.push(yname);
   });
 
-  return { batch, name, date_display, date_iso, style, batch_size_display, batch_size_l, abv, ebc, ibu, hops, fermentables, yeasts };
+  // overige ingrediënten (misc), uniek op naam, "Irish Moss" wordt overgeslagen
+  const misc = [];
+  rec.querySelectorAll("MISCS > MISC").forEach(m => {
+    const mname = xmlText(m, "NAME");
+    if (mname && mname.trim().toLowerCase() !== "irish moss" && !misc.includes(mname)) misc.push(mname);
+  });
+
+  return { batch, name, date_display, date_iso, style, batch_size_display, batch_size_l, abv, ebc, ibu, hops, fermentables, yeasts, misc };
 }
 
 function fillFormFromParsed(p){
@@ -454,6 +477,9 @@ function fillFormFromParsed(p){
 
   clearRows("yeast-rows"); pendingYeastRows=0;
   (p.yeasts.length ? p.yeasts : [""]).forEach(y => addYeastRow(y));
+
+  clearRows("misc-rows"); pendingMiscRows=0;
+  (p.misc||[]).forEach(m => addMiscRow(m));
 }
 
 /* ---------------- Afbeeldingen ---------------- */
@@ -527,6 +553,8 @@ async function addRecipeToList(){
 
   const yeasts = [...document.querySelectorAll("#yeast-rows .list-row")].map(row => row.querySelector(".yeast-name").value.trim()).filter(Boolean);
 
+  const misc = [...document.querySelectorAll("#misc-rows .list-row")].map(row => row.querySelector(".misc-name").value.trim()).filter(Boolean);
+
   const abvRaw = document.getElementById("f-abv").value;
   const ebcRaw = document.getElementById("f-ebc").value;
   const ibuRaw = document.getElementById("f-ibu").value;
@@ -558,6 +586,7 @@ async function addRecipeToList(){
     hops,
     fermentables,
     yeasts,
+    misc,
     source_file: "handmatig toegevoegd via beheertool",
     labels
   };
@@ -579,6 +608,7 @@ async function addRecipeToList(){
   clearRows("ferm-rows"); pendingFermRows=0; addFermRow();
   clearRows("hop-rows"); pendingHopRows=0; addHopRow();
   clearRows("yeast-rows"); pendingYeastRows=0; addYeastRow();
+  clearRows("misc-rows"); pendingMiscRows=0;
   document.getElementById("f-images").value = "";
   document.getElementById("image-thumbs").innerHTML = "";
   uploadedImages = [];

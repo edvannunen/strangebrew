@@ -50,12 +50,14 @@ Als je liever direct `data.json` bewerkt: het is een JSON-lijst van objecten met
     { "name": "Pale Ale Mout", "type": "Grain", "grams": 4000 }
   ],
   "yeasts": ["Safale US-05"],
+  "misc": ["Kaneel"],
   "labels": ["batch82 Naam van het bier.jpg"]
 }
 ```
 
 Let op een paar dingen:
 - **`batch`** moet uniek zijn en bepaalt de sortering.
+- **`misc`** is optioneel — overige ingrediënten (kruiden, klaringsmiddelen, etc.), gewoon een lijst van namen. Bij automatisch importeren via `beheer.html` wordt "Irish Moss" altijd overgeslagen, want dat voegt niks toe op het dashboard.
 - **`ebc`** is altijd al in EBC (niet SRM) — bij twijfel: EBC ≈ SRM × 1,97.
 - **`date_display`** is `dd-mm-jjjj`, **`date_iso`** is `jjjj-mm-dd` (die laatste bepaalt de sortering op de tijdlijn).
 - **`labels`** is een lijst van bestandsnamen (zonder `#`-teken, dat breekt de link) die moeten bestaan in zowel `images/labels/` (origineel) als `images/thumbs/` (verkleind, max ~420px). Geen labels? Laat de lijst leeg (`[]`) — dan toont het dashboard automatisch het logo als placeholder.

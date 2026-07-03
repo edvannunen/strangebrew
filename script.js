@@ -186,7 +186,8 @@ function buildStyleChart(){
   RECIPES.forEach(r => { counts[r.style] = (counts[r.style]||0) + 1; });
   const entries = Object.entries(counts).sort((a,b)=>b[1]-a[1]);
   const top = entries.slice(0, 10);
-  const rest = entries.slice(10).reduce((s,[,c])=>s+c, 0);
+  const restEntries = entries.slice(10);
+  const rest = restEntries.reduce((s,[,c])=>s+c, 0);
   if (rest > 0) top.push(["Overig", rest]);
 
   new Chart(document.getElementById("chart-stijl"), {
@@ -202,6 +203,23 @@ function buildStyleChart(){
     },
     options: chartBaseOptions({
       indexAxis:"y",
+      plugins:{
+        legend:{display:false},
+        tooltip:{
+          backgroundColor:"#15161A", titleColor:COLORS.cream, bodyColor:COLORS.creamDim,
+          borderColor:COLORS.line, borderWidth:1, padding:10,
+          titleFont:{family:FONT_BODY, weight:"600"}, bodyFont:{family:FONT_MONO, size:12},
+          callbacks:{
+            label: (ctx) => {
+              const [label, count] = top[ctx.dataIndex];
+              if (label === "Overig"){
+                return restEntries.map(([name,c]) => `${name}: ${c}`);
+              }
+              return `${count} brouwsels`;
+            }
+          }
+        }
+      },
       scales:{
         x:{ ticks:{color:COLORS.creamDim, font:{family:FONT_MONO, size:11}}, grid:{color:COLORS.line}, beginAtZero:true, ticks:{precision:0, color: COLORS.creamDim, font:{family:FONT_MONO, size:11}} },
         y:{ ticks:{color:COLORS.cream, font:{family:FONT_BODY, size:12}}, grid:{display:false} }
@@ -336,7 +354,7 @@ function buildHopChart(){
 function buildYeastList(){
   const counts = {};
   RECIPES.forEach(r => (r.yeasts||[]).forEach(y => { counts[y] = (counts[y]||0)+1; }));
-  const entries = Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,9);
+  const entries = Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,8);
   const max = entries.length ? entries[0][1] : 1;
 
   document.getElementById("yeast-list").innerHTML = entries.map(([name,count]) => `
@@ -435,19 +453,44 @@ function renderLabelTile(r){
 /* ============================================================
    MODAL / DETAILKAART
    ============================================================ */
+let currentModalIndex = -1;
+
 function initModal(){
   const overlay = document.getElementById("modal-overlay");
   document.getElementById("modal-close").addEventListener("click", closeModal);
+  document.getElementById("modal-prev").addEventListener("click", () => showModalAtIndex(currentModalIndex - 1));
+  document.getElementById("modal-next").addEventListener("click", () => showModalAtIndex(currentModalIndex + 1));
   overlay.addEventListener("click", (e) => { if (e.target === overlay) closeModal(); });
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+  document.addEventListener("keydown", (e) => {
+    if (document.getElementById("modal-overlay").hidden) return;
+    if (e.key === "Escape") closeModal();
+    if (e.key === "ArrowLeft") showModalAtIndex(currentModalIndex - 1);
+    if (e.key === "ArrowRight") showModalAtIndex(currentModalIndex + 1);
+  });
 }
 function closeModal(){
   document.getElementById("modal-overlay").hidden = true;
 }
+function updateModalNavButtons(){
+  document.getElementById("modal-prev").disabled = currentModalIndex <= 0;
+  document.getElementById("modal-next").disabled = currentModalIndex >= RECIPES.length - 1;
+}
+function showModalAtIndex(idx){
+  if (idx < 0 || idx >= RECIPES.length) return;
+  currentModalIndex = idx;
+  renderModalContent(RECIPES[idx]);
+  updateModalNavButtons();
+  document.getElementById("modal-card").scrollTop = 0;
+}
 function openModalForBatch(batchNum){
-  const r = RECIPES.find(x => x.batch === batchNum);
-  if (!r) return;
-
+  const idx = RECIPES.findIndex(x => x.batch === batchNum);
+  if (idx === -1) return;
+  currentModalIndex = idx;
+  renderModalContent(RECIPES[idx]);
+  updateModalNavButtons();
+  document.getElementById("modal-overlay").hidden = false;
+}
+function renderModalContent(r){
   const hasLabel = r.labels && r.labels.length > 0;
   const ebcHex = r.ebc != null ? ebcToHex(r.ebc) : "#5B5B5B";
 
@@ -472,6 +515,11 @@ function openModalForBatch(batchNum){
        <div class="hop-pills">${r.labels.map(l => `<span class="hop-pill">${esc(normLabelName(l))}</span>`).join("")}</div>`
     : "";
 
+  const miscHtml = (r.misc && r.misc.length)
+    ? `<div class="ticket-section-title">Overig</div>
+       <div class="hop-pills">${r.misc.map(m => `<span class="grain-pill">${esc(m)}</span>`).join("")}</div>`
+    : "";
+
   document.getElementById("modal-content").innerHTML = `
     <div class="ticket-head">
       ${thumbHtml}
@@ -491,24 +539,22 @@ function openModalForBatch(batchNum){
           <span class="k">Batchgrootte</span>
           <span class="v">${r.batch_size_display || (r.batch_size_l ? r.batch_size_l+" L" : "onbekend")}</span>
         </div>
-      </div>
-      <div class="ticket-row">
         <div class="ticket-field">
           <span class="k">Alcohol</span>
           <span class="v">${r.abv != null ? r.abv.toFixed(1)+"%" : "onbekend"} <small>vol</small></span>
         </div>
+      </div>
+      <div class="ticket-row">
         <div class="ticket-field">
           <span class="k">Kleur</span>
           <span class="v ticket-swatch"><span class="dot" style="background:${ebcHex}"></span>${r.ebc != null ? Math.round(r.ebc)+" EBC" : "onbekend"}</span>
         </div>
-      </div>
-      ${r.ibu != null ? `
-      <div class="ticket-row ticket-row-single">
+        ${r.ibu != null ? `
         <div class="ticket-field">
           <span class="k">Bitterheid</span>
           <span class="v">${r.ibu.toFixed(0)} <small>IBU</small></span>
-        </div>
-      </div>` : ""}
+        </div>` : ""}
+      </div>
 
       <div class="ticket-section-title">Mout &amp; grondstoffen</div>
       <div class="hop-pills">${fermHtml}</div>
@@ -519,6 +565,7 @@ function openModalForBatch(batchNum){
       <div class="ticket-section-title">Gist</div>
       <div class="yeast-tags">${yeastHtml}</div>
 
+      ${miscHtml}
       ${variantsHtml}
 
       <div class="ticket-foot">
@@ -527,5 +574,4 @@ function openModalForBatch(batchNum){
       </div>
     </div>
   `;
-  document.getElementById("modal-overlay").hidden = false;
 }
