@@ -79,6 +79,7 @@ function normLabelName(fname){
 }
 
 let RECIPES = [];
+let activeFilter = null; // { type: "style"|"hop"|"yeast", value: string|string[] }
 
 /* ============================================================
    INIT
@@ -97,6 +98,7 @@ fetch("data.json")
     buildEbcScale();
     buildTimeline();
     initModal();
+    initFilterBar();
   })
   .catch(err => {
     console.error("Kon data.json niet laden:", err);
@@ -108,23 +110,65 @@ fetch("data.json")
    TABS
    ============================================================ */
 function initTabs(){
+  document.getElementById("tab-cijfers").addEventListener("click", () => showPage("cijfers"));
+  document.getElementById("tab-tijdlijn").addEventListener("click", () => showPage("tijdlijn"));
+}
+function showPage(which){
   const tabCijfers = document.getElementById("tab-cijfers");
   const tabTijdlijn = document.getElementById("tab-tijdlijn");
   const pageCijfers = document.getElementById("page-cijfers");
   const pageTijdlijn = document.getElementById("page-tijdlijn");
+  const cijfers = which === "cijfers";
+  tabCijfers.classList.toggle("active", cijfers);
+  tabTijdlijn.classList.toggle("active", !cijfers);
+  tabCijfers.setAttribute("aria-selected", cijfers);
+  tabTijdlijn.setAttribute("aria-selected", !cijfers);
+  pageCijfers.hidden = !cijfers;
+  pageTijdlijn.hidden = cijfers;
+  window.scrollTo({top:0, behavior: "instant" in window ? "instant" : "auto"});
+}
 
-  function show(which){
-    const cijfers = which === "cijfers";
-    tabCijfers.classList.toggle("active", cijfers);
-    tabTijdlijn.classList.toggle("active", !cijfers);
-    tabCijfers.setAttribute("aria-selected", cijfers);
-    tabTijdlijn.setAttribute("aria-selected", !cijfers);
-    pageCijfers.hidden = !cijfers;
-    pageTijdlijn.hidden = cijfers;
-    window.scrollTo({top:0, behavior: "instant" in window ? "instant" : "auto"});
+/* ============================================================
+   TIJDLIJN FILTER (klik in grafieken op stijl/hop/gist)
+   ============================================================ */
+function initFilterBar(){
+  document.getElementById("timeline-filter-clear").addEventListener("click", clearFilter);
+}
+function applyFilter(type, value){
+  activeFilter = { type, value };
+  showPage("tijdlijn");
+  buildTimeline();
+}
+function clearFilter(){
+  activeFilter = null;
+  buildTimeline();
+}
+function matchesFilter(r){
+  if (!activeFilter) return true;
+  const { type, value } = activeFilter;
+  if (type === "style") return Array.isArray(value) ? value.includes(r.style) : r.style === value;
+  if (type === "hop") return (r.hops||[]).some(h => h.name === value);
+  if (type === "yeast") return (r.yeasts||[]).includes(value);
+  return true;
+}
+function filterLabel(){
+  if (!activeFilter) return "";
+  const { type, value } = activeFilter;
+  if (type === "style") return Array.isArray(value) ? `Stijl: overig (${value.length})` : `Stijl: ${value}`;
+  if (type === "hop") return `Hop: ${value}`;
+  if (type === "yeast") return `Gist: ${value}`;
+  return "";
+}
+function updateFilterBar(){
+  const bar = document.getElementById("timeline-filter");
+  const labelEl = document.getElementById("timeline-filter-label");
+  if (activeFilter){
+    bar.hidden = false;
+    labelEl.textContent = filterLabel();
+  } else {
+    bar.hidden = true;
+    labelEl.textContent = "";
   }
-  tabCijfers.addEventListener("click", () => show("cijfers"));
-  tabTijdlijn.addEventListener("click", () => show("tijdlijn"));
 }
 
 /* ============================================================
@@ -203,6 +247,16 @@ function buildStyleChart(){
     },
     options: chartBaseOptions({
       indexAxis:"y",
+      onClick: (evt, elements) => {
+        if (!elements.length) return;
+        const [label] = top[elements[0].index];
+        if (label === "Overig"){
+          applyFilter("style", restEntries.map(e=>e[0]));
+        } else {
+          applyFilter("style", label);
+        }
+      },
+      onHover: (evt, elements) => { evt.native.target.style.cursor = elements.length ? "pointer" : "default"; },
       plugins:{
         legend:{display:false},
         tooltip:{
@@ -326,6 +380,12 @@ function buildHopChart(){
       ]
     },
     options: chartBaseOptions({
+      onClick: (evt, elements) => {
+        if (!elements.length) return;
+        const e = entries[elements[0].index];
+        applyFilter("hop", e[0]);
+      },
+      onHover: (evt, elements) => { evt.native.target.style.cursor = elements.length ? "pointer" : "default"; },
       plugins:{
         legend:{display:false},
         tooltip:{
@@ -358,12 +418,22 @@ function buildYeastList(){
   const max = entries.length ? entries[0][1] : 1;
 
   document.getElementById("yeast-list").innerHTML = entries.map(([name,count]) => `
-    <li class="yeast-row">
+    <li class="yeast-row" data-yeast="${esc(name)}" tabindex="0" role="button" aria-label="Filter tijdlijn op gist ${esc(name)}">
       <span class="yeast-name" title="${esc(name)}">${esc(name)}</span>
       <span class="yeast-bar-track"><span class="yeast-bar-fill" style="width:${(count/max*100).toFixed(0)}%"></span></span>
       <span class="yeast-count">${count}</span>
     </li>
   `).join("");
+
+  document.querySelectorAll("#yeast-list .yeast-row").forEach(el => {
+    el.addEventListener("click", () => applyFilter("yeast", el.dataset.yeast));
+    el.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " "){
+        e.preventDefault();
+        applyFilter("yeast", el.dataset.yeast);
+      }
+    });
+  });
 }
 
 /* ============================================================
@@ -393,8 +463,16 @@ function buildEbcScale(){
    TIJDLIJN (pagina 2)
    ============================================================ */
 function buildTimeline(){
-  const withDate = RECIPES.filter(r => r.date_iso).sort((a,b)=> a.date_iso.localeCompare(b.date_iso));
-  const withoutDate = RECIPES.filter(r => !r.date_iso).sort((a,b)=> a.batch-b.batch);
+  updateFilterBar();
+
+  const filtered = RECIPES.filter(matchesFilter);
+  const withDate = filtered.filter(r => r.date_iso).sort((a,b)=> a.date_iso.localeCompare(b.date_iso));
+  const withoutDate = filtered.filter(r => !r.date_iso).sort((a,b)=> a.batch-b.batch);
+
+  if (!filtered.length){
+    document.getElementById("timeline").innerHTML = `<p class="timeline-empty">Geen brouwsels gevonden voor dit filter.</p>`;
+    return;
+  }
 
   const byYear = {};
   withDate.forEach(r => {

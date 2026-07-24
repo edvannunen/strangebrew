@@ -223,7 +223,8 @@ main{ max-width:1180px; margin:0 auto; padding:0 24px 80px; position:relative; z
   -webkit-mask-image: linear-gradient(180deg, #000 calc(100% - 22px), transparent 100%);
   mask-image: linear-gradient(180deg, #000 calc(100% - 22px), transparent 100%);
 }
-.yeast-row{ display:flex; align-items:center; gap:10px; }
+.yeast-row{ display:flex; align-items:center; gap:10px; cursor:pointer; border-radius:6px; }
+.yeast-row:hover, .yeast-row:focus-visible{ outline:none; background:rgba(241,230,201,0.06); }
 .yeast-bar-track{ flex:1; height:8px; border-radius:4px; background:rgba(241,230,201,0.08); overflow:hidden; }
 .yeast-bar-fill{ height:100%; border-radius:4px; background:linear-gradient(90deg, var(--flame-gold), var(--flame-orange)); }
 .yeast-name{ font-size:13px; color:var(--cream); flex:0 0 auto; max-width:52%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
@@ -264,6 +265,26 @@ main{ max-width:1180px; margin:0 auto; padding:0 24px 80px; position:relative; z
    TIMELINE (pagina 2)
    ============================================================ */
 .timeline{ padding-bottom:20px; }
+.timeline-filter{
+  display:flex; align-items:center; gap:12px;
+  margin:0 0 24px;
+  padding:10px 16px;
+  background:rgba(240,146,31,0.1);
+  border:1px solid rgba(240,146,31,0.4);
+  border-radius:8px;
+}
+.timeline-filter-label{
+  font-family:var(--font-mono); font-size:13px; color:var(--cream);
+  flex:1;
+}
+.timeline-filter-clear{
+  font-family:var(--font-body); font-size:12.5px; color:var(--cream-dim);
+  background:none; border:1px solid var(--line-strong); border-radius:6px;
+  padding:5px 10px; cursor:pointer; white-space:nowrap;
+}
+.timeline-filter-clear:hover, .timeline-filter-clear:focus-visible{ color:var(--cream); border-color:var(--flame-orange); }
+.timeline-empty{ color:var(--cream-dim); padding:40px 0; text-align:center; }
+
 .timeline-year{
   display:flex; align-items:center; gap:14px;
   margin:38px 0 20px;
