@@ -95,6 +95,8 @@ fetch("data.json")
     buildAbvChart();
     buildBatchChart();
     buildHopChart();
+    buildMoutChart();
+    initMoutToggle();
     buildYeastList();
     buildEbcScale();
     buildTimeline();
@@ -151,6 +153,7 @@ function matchesFilter(r){
   if (type === "style") return Array.isArray(value) ? value.includes(r.style) : r.style === value;
   if (type === "hop") return (r.hops||[]).some(h => h.name === value);
   if (type === "yeast") return (r.yeasts||[]).includes(value);
+  if (type === "grain") return (r.fermentables||[]).some(f => f.name === value);
   return true;
 }
 function filterLabel(){
@@ -159,6 +162,7 @@ function filterLabel(){
   if (type === "style") return Array.isArray(value) ? `Stijl: overig (${value.length})` : `Stijl: ${value}`;
   if (type === "hop") return `Hop: ${value}`;
   if (type === "yeast") return `Gist: ${value}`;
+  if (type === "grain") return `Mout: ${value}`;
   return "";
 }
 function updateFilterBar(){
@@ -431,6 +435,92 @@ function buildHopChart(){
         y:{ ticks:{precision:0, color:COLORS.creamDim, font:{family:FONT_MONO, size:11}}, grid:{color:COLORS.line}, beginAtZero:true }
       }
     })
+  });
+}
+
+/* ============================================================
+   CHART: mout
+   ============================================================ */
+let hideBaseMalt = false;
+let moutChart = null;
+
+// Herkent de basismouten (Pils/Pale) die vrijwel elk brouwsel domineren,
+// zonder ze te verwarren met moutsoorten die toevallig "pils"/"pale" in
+// hun naam hebben maar specialty mout zijn (Cara-Pils, Pale Wheat, Pale
+// Chocolate Malt).
+function isBaseMalt(name){
+  const n = name.toLowerCase();
+  if (n.includes("cara") || n.includes("wheat") || n.includes("chocolate")) return false;
+  if (n.includes("pils")) return true;
+  if (n.startsWith("pale malt")) return true;
+  if (n === "pale ale (dingemans)") return true;
+  return false;
+}
+
+function buildMoutChart(){
+  const byMout = {};
+  RECIPES.forEach(r => {
+    (r.fermentables||[]).forEach(f => {
+      if (f.type !== "Grain") return;
+      if (hideBaseMalt && isBaseMalt(f.name)) return;
+      if (!byMout[f.name]) byMout[f.name] = {count:0, grams:0};
+      byMout[f.name].count += 1;
+      byMout[f.name].grams += (f.grams||0);
+    });
+  });
+  const entries = Object.entries(byMout).sort((a,b)=>b[1].count-a[1].count).slice(0,12);
+
+  if (moutChart) moutChart.destroy();
+  moutChart = new Chart(document.getElementById("chart-mout"), {
+    type:"bar",
+    data:{
+      labels: entries.map(e=>e[0]),
+      datasets:[
+        {
+          label:"Aantal brouwsels",
+          data: entries.map(e=>e[1].count),
+          backgroundColor: COLORS.amber,
+          borderRadius:4,
+          maxBarThickness:22,
+          yAxisID:"y",
+        },
+      ]
+    },
+    options: chartBaseOptions({
+      onClick: (evt, elements) => {
+        if (!elements.length) return;
+        const e = entries[elements[0].index];
+        applyFilter("grain", e[0]);
+      },
+      onHover: (evt, elements) => { evt.native.target.style.cursor = elements.length ? "pointer" : "default"; },
+      plugins:{
+        legend:{display:false},
+        tooltip:{
+          backgroundColor:"#15161A", titleColor:COLORS.cream, bodyColor:COLORS.creamDim,
+          borderColor:COLORS.line, borderWidth:1, padding:10,
+          titleFont:{family:FONT_BODY, weight:"600"}, bodyFont:{family:FONT_MONO, size:12},
+          callbacks:{
+            label: (ctx) => {
+              const e = entries[ctx.dataIndex];
+              return [`${e[1].count} brouwsels`, `${Math.round(e[1].grams)} g totaal`];
+            }
+          }
+        }
+      },
+      scales:{
+        x:{ ticks:{color:COLORS.cream, font:{family:FONT_BODY, size:11}, maxRotation:55, minRotation:55}, grid:{display:false} },
+        y:{ ticks:{precision:0, color:COLORS.creamDim, font:{family:FONT_MONO, size:11}}, grid:{color:COLORS.line}, beginAtZero:true }
+      }
+    })
+  });
+}
+
+function initMoutToggle(){
+  const btn = document.getElementById("mout-toggle");
+  btn.addEventListener("click", () => {
+    hideBaseMalt = !hideBaseMalt;
+    btn.textContent = hideBaseMalt ? "Pils & Pale Ale tonen" : "Pils & Pale Ale verbergen";
+    buildMoutChart();
   });
 }
 
