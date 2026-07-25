@@ -80,6 +80,7 @@ function normLabelName(fname){
 
 let RECIPES = [];
 let activeFilter = null; // { type: "style"|"hop"|"yeast", value: string|string[] }
+let searchQuery = "";
 
 /* ============================================================
    INIT
@@ -99,6 +100,7 @@ fetch("data.json")
     buildTimeline();
     initModal();
     initFilterBar();
+    initSearchBox();
   })
   .catch(err => {
     console.error("Kon data.json niet laden:", err);
@@ -169,6 +171,30 @@ function updateFilterBar(){
     bar.hidden = true;
     labelEl.textContent = "";
   }
+}
+
+/* ============================================================
+   TIJDLIJN ZOEKEN (naam + ingrediënten)
+   ============================================================ */
+function initSearchBox(){
+  document.getElementById("timeline-search").addEventListener("input", (e) => {
+    searchQuery = e.target.value.trim().toLowerCase();
+    buildTimeline();
+  });
+}
+function matchesSearch(r){
+  if (!searchQuery) return true;
+  const haystack = [
+    r.name, r.style,
+    ...(r.fermentables||[]).map(f=>f.name),
+    ...(r.hops||[]).map(h=>h.name),
+    ...(r.yeasts||[]),
+    ...(r.misc||[]),
+  ].filter(Boolean).join(" ").toLowerCase();
+  return haystack.includes(searchQuery);
+}
+function matchesTimeline(r){
+  return matchesFilter(r) && matchesSearch(r);
 }
 
 /* ============================================================
@@ -465,12 +491,12 @@ function buildEbcScale(){
 function buildTimeline(){
   updateFilterBar();
 
-  const filtered = RECIPES.filter(matchesFilter);
+  const filtered = RECIPES.filter(matchesTimeline);
   const withDate = filtered.filter(r => r.date_iso).sort((a,b)=> a.date_iso.localeCompare(b.date_iso));
   const withoutDate = filtered.filter(r => !r.date_iso).sort((a,b)=> a.batch-b.batch);
 
   if (!filtered.length){
-    document.getElementById("timeline").innerHTML = `<p class="timeline-empty">Geen brouwsels gevonden voor dit filter.</p>`;
+    document.getElementById("timeline").innerHTML = `<p class="timeline-empty">Geen brouwsels gevonden.</p>`;
     return;
   }
 
@@ -491,7 +517,7 @@ function buildTimeline(){
   document.getElementById("timeline").innerHTML = html;
 
   document.querySelectorAll(".label-tile").forEach(el => {
-    el.addEventListener("click", () => openModalForBatch(parseInt(el.dataset.batch)));
+    el.addEventListener("click", () => openModalForBatch(parseInt(el.dataset.batch), filtered));
   });
 }
 
@@ -532,6 +558,7 @@ function renderLabelTile(r){
    MODAL / DETAILKAART
    ============================================================ */
 let currentModalIndex = -1;
+let modalList = []; // list prev/next navigates through — the timeline's current filter+search, or all RECIPES from the EBC scale
 
 function initModal(){
   const overlay = document.getElementById("modal-overlay");
@@ -552,16 +579,17 @@ function closeModal(){
   document.getElementById("modal-overlay").hidden = true;
 }
 function showModalAtIndex(idx){
-  if (idx < 0 || idx >= RECIPES.length) return;
+  if (idx < 0 || idx >= modalList.length) return;
   currentModalIndex = idx;
-  renderModalContent(RECIPES[idx]);
+  renderModalContent(modalList[idx]);
   document.getElementById("modal-card").scrollTop = 0;
 }
-function openModalForBatch(batchNum){
-  const idx = RECIPES.findIndex(x => x.batch === batchNum);
+function openModalForBatch(batchNum, list){
+  modalList = list || RECIPES;
+  const idx = modalList.findIndex(x => x.batch === batchNum);
   if (idx === -1) return;
   currentModalIndex = idx;
-  renderModalContent(RECIPES[idx]);
+  renderModalContent(modalList[idx]);
   document.getElementById("modal-overlay").hidden = false;
 }
 function renderModalContent(r){
@@ -602,7 +630,7 @@ function renderModalContent(r){
         <div class="ticket-title-row">
           <button class="ticket-nav-btn ticket-nav-prev" ${currentModalIndex <= 0 ? "disabled" : ""} aria-label="Vorig brouwsel">&#10094;</button>
           <div class="ticket-title">${esc(r.name)}</div>
-          <button class="ticket-nav-btn ticket-nav-next" ${currentModalIndex >= RECIPES.length - 1 ? "disabled" : ""} aria-label="Volgend brouwsel">&#10095;</button>
+          <button class="ticket-nav-btn ticket-nav-next" ${currentModalIndex >= modalList.length - 1 ? "disabled" : ""} aria-label="Volgend brouwsel">&#10095;</button>
         </div>
         <div class="ticket-style">${esc(r.style)}</div>
       </div>

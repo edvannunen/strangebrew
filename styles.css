@@ -265,6 +265,15 @@ main{ max-width:1180px; margin:0 auto; padding:0 24px 80px; position:relative; z
    TIMELINE (pagina 2)
    ============================================================ */
 .timeline{ padding-bottom:20px; }
+.timeline-search{ margin:0 0 16px; max-width:320px; }
+.timeline-search-input{
+  width:100%;
+  font-family:var(--font-body); font-size:14px; color:var(--cream);
+  background:var(--char); border:1px solid var(--line); border-radius:8px;
+  padding:9px 12px;
+}
+.timeline-search-input::placeholder{ color:var(--cream-dim-2); }
+.timeline-search-input:focus{ outline:none; border-color:var(--flame-orange); }
 .timeline-filter{
   display:flex; align-items:center; gap:12px;
   margin:0 0 24px;
@@ -273,6 +282,7 @@ main{ max-width:1180px; margin:0 auto; padding:0 24px 80px; position:relative; z
   border:1px solid rgba(240,146,31,0.4);
   border-radius:8px;
 }
+.timeline-filter[hidden]{ display:none; }
 .timeline-filter-label{
   font-family:var(--font-mono); font-size:13px; color:var(--cream);
   flex:1;
