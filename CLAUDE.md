@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Context
 
-This is **Strange Brew**, a homebrewing dashboard. It's the third of a small family of sibling projects deployed on the same Hetzner + Coolify server — see `../Fietsen/CLAUDE.md` for the full family overview (De Sprong, Fietsen, Home) and shared decisions (path-based routing, local dev conventions, the planned shared-login gate in Part 3). Unlike the other two apps, Strange Brew isn't linked from Home's landing page yet — that tile is a separate follow-up to be done in the `../Home` project itself.
+This is **Strange Brew**, a homebrewing dashboard. It's the third of a small family of sibling projects deployed on the same Hetzner + Coolify server — see `../Fietsen/CLAUDE.md` for the full family overview (De Sprong, Fietsen, Home) and shared decisions (path-based routing, local dev conventions, the planned shared-login gate in Part 3), and `../Coolify Hosting Playbook.md` for the full per-project Coolify deployment reference. Unlike the other two apps, Strange Brew isn't linked from Home's landing page yet — that tile is a separate follow-up to be done in the `../Home` project itself.
 
 ## What this is
 
