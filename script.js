@@ -103,6 +103,7 @@ fetch("data.json")
     initModal();
     initFilterBar();
     initSearchBox();
+    initSortControl();
   })
   .catch(err => {
     console.error("Kon data.json niet laden:", err);
@@ -116,6 +117,8 @@ fetch("data.json")
 function initTabs(){
   document.getElementById("tab-cijfers").addEventListener("click", () => showPage("cijfers"));
   document.getElementById("tab-tijdlijn").addEventListener("click", () => showPage("tijdlijn"));
+  window.addEventListener("hashchange", () => showPage(location.hash === "#tijdlijn" ? "tijdlijn" : "cijfers"));
+  showPage(location.hash === "#tijdlijn" ? "tijdlijn" : "cijfers");
 }
 function showPage(which){
   const tabCijfers = document.getElementById("tab-cijfers");
@@ -129,6 +132,10 @@ function showPage(which){
   tabTijdlijn.setAttribute("aria-selected", !cijfers);
   pageCijfers.hidden = !cijfers;
   pageTijdlijn.hidden = cijfers;
+  const wantHash = cijfers ? "" : "#tijdlijn";
+  if (location.hash !== wantHash){
+    history.replaceState(null, "", location.pathname + location.search + wantHash);
+  }
   window.scrollTo({top:0, behavior: "instant" in window ? "instant" : "auto"});
 }
 
@@ -576,19 +583,42 @@ function buildEbcScale(){
 }
 
 /* ============================================================
-   TIJDLIJN (pagina 2)
+   TIJDLIJN SORTERING
    ============================================================ */
-function buildTimeline(){
-  updateFilterBar();
+let sortOrder = "oldest"; // oldest | newest | style | abv-asc | abv-desc
 
-  const filtered = RECIPES.filter(matchesTimeline);
-  const withDate = filtered.filter(r => r.date_iso).sort((a,b)=> a.date_iso.localeCompare(b.date_iso));
+function initSortControl(){
+  document.getElementById("timeline-sort").addEventListener("change", (e) => {
+    sortOrder = e.target.value;
+    buildTimeline();
+  });
+}
+
+function sortComparator(order){
+  if (order === "abv-asc") return (a,b) => (a.abv ?? Infinity) - (b.abv ?? Infinity);
+  if (order === "abv-desc") return (a,b) => (b.abv ?? -Infinity) - (a.abv ?? -Infinity);
+  return () => 0;
+}
+
+function renderByStyle(filtered){
+  const byStyle = {};
+  filtered.forEach(r => {
+    const s = r.style || "Onbekende stijl";
+    (byStyle[s] = byStyle[s] || []).push(r);
+  });
+  const styles = Object.keys(byStyle).sort((a,b)=>a.localeCompare(b));
+  let html = "";
+  styles.forEach(s => {
+    const group = byStyle[s].slice().sort((a,b)=> (a.date_iso||"").localeCompare(b.date_iso||"") || a.batch-b.batch);
+    html += renderYearBlock(s, group);
+  });
+  return html;
+}
+
+function renderByYear(filtered, order){
+  const withDate = filtered.filter(r => r.date_iso)
+    .sort((a,b)=> order === "newest" ? b.date_iso.localeCompare(a.date_iso) : a.date_iso.localeCompare(b.date_iso));
   const withoutDate = filtered.filter(r => !r.date_iso).sort((a,b)=> a.batch-b.batch);
-
-  if (!filtered.length){
-    document.getElementById("timeline").innerHTML = `<p class="timeline-empty">Geen brouwsels gevonden.</p>`;
-    return;
-  }
 
   const byYear = {};
   withDate.forEach(r => {
@@ -596,13 +626,33 @@ function buildTimeline(){
     (byYear[y] = byYear[y] || []).push(r);
   });
 
-  const years = Object.keys(byYear).sort();
-  let html = "";
+  let years = Object.keys(byYear).sort();
+  if (order === "newest") years = years.reverse();
 
-  if (withoutDate.length){
-    html += renderYearBlock("Datum onbekend", withoutDate);
-  }
+  let html = "";
+  if (order === "oldest" && withoutDate.length) html += renderYearBlock("Datum onbekend", withoutDate);
   years.forEach(y => { html += renderYearBlock(y, byYear[y]); });
+  if (order === "newest" && withoutDate.length) html += renderYearBlock("Datum onbekend", withoutDate);
+  return html;
+}
+
+/* ============================================================
+   TIJDLIJN (pagina 2)
+   ============================================================ */
+function buildTimeline(){
+  updateFilterBar();
+
+  const filtered = RECIPES.filter(matchesTimeline);
+
+  if (!filtered.length){
+    document.getElementById("timeline").innerHTML = `<p class="timeline-empty">Geen brouwsels gevonden.</p>`;
+    return;
+  }
+
+  let html;
+  if (sortOrder === "oldest" || sortOrder === "newest") html = renderByYear(filtered, sortOrder);
+  else if (sortOrder === "style") html = renderByStyle(filtered);
+  else html = `<div class="label-grid">${filtered.slice().sort(sortComparator(sortOrder)).map(renderLabelTile).join("")}</div>`;
 
   document.getElementById("timeline").innerHTML = html;
 
@@ -629,6 +679,7 @@ function renderLabelTile(r){
   const firstLabel = hasLabel ? `images/thumbs/${encodeURIComponent(r.labels[0])}` : "images/logo.png";
   const variantNote = hasLabel && r.labels.length > 1 ? `<span class="label-variant-badge">${r.labels.length}x</span>` : "";
   const ebcHex = r.ebc != null ? ebcToHex(r.ebc) : "#5B5B5B";
+  const abvText = r.abv != null ? `${r.abv.toFixed(1)} %` : "";
 
   return `
     <button class="label-tile" data-batch="${r.batch}">
@@ -639,7 +690,10 @@ function renderLabelTile(r){
         <span class="label-ebc-chip" style="background:${ebcHex}" title="${r.ebc != null ? r.ebc.toFixed(0)+' EBC' : ''}"></span>
       </div>
       <span class="label-name">${esc(r.name)}</span>
-      <span class="label-meta">${r.date_display || "datum onbekend"}</span>
+      <span class="label-meta">
+        <span class="label-meta-date">${r.date_display || "datum onbekend"}</span>
+        ${abvText ? `<span class="label-meta-abv">${abvText}</span>` : ""}
+      </span>
     </button>
   `;
 }

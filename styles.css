@@ -273,15 +273,22 @@ main{ max-width:1180px; margin:0 auto; padding:0 24px 80px; position:relative; z
    TIMELINE (pagina 2)
    ============================================================ */
 .timeline{ padding-bottom:20px; }
-.timeline-search{ margin:0 0 16px; max-width:320px; }
+.timeline-controls{ display:flex; flex-wrap:wrap; gap:10px; margin:0 0 16px; }
 .timeline-search-input{
-  width:100%;
+  flex:1 1 240px; min-width:0; max-width:320px;
   font-family:var(--font-body); font-size:14px; color:var(--cream);
   background:var(--char); border:1px solid var(--line); border-radius:8px;
   padding:9px 12px;
 }
 .timeline-search-input::placeholder{ color:var(--cream-dim-2); }
 .timeline-search-input:focus{ outline:none; border-color:var(--flame-orange); }
+.timeline-sort-select{
+  flex:0 0 auto;
+  font-family:var(--font-body); font-size:14px; color:var(--cream);
+  background:var(--char); border:1px solid var(--line); border-radius:8px;
+  padding:9px 12px; cursor:pointer;
+}
+.timeline-sort-select:focus{ outline:none; border-color:var(--flame-orange); }
 .timeline-filter{
   display:flex; align-items:center; gap:12px;
   margin:0 0 24px;
@@ -364,7 +371,9 @@ button.label-tile{ appearance:none; }
   border:2px solid rgba(21,22,26,0.7);
 }
 .label-name{ font-size:13px; font-weight:600; color:var(--cream); line-height:1.25; }
-.label-meta{ font-size:11px; color:var(--cream-dim-2); font-family:var(--font-mono); }
+.label-meta{ display:flex; align-items:baseline; gap:8px; font-size:11px; color:var(--cream-dim-2); font-family:var(--font-mono); }
+.label-meta-date{ flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.label-meta-abv{ flex:0 0 auto; color:var(--cream-dim); }
 
 /* ============================================================
    MODAL / DETAILKAART ("brouwbon")

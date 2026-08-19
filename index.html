@@ -156,8 +156,15 @@
       <p class="hero-sub">Chronologisch, van het eerste flesje tot de laatste batch. Tik op een etiket voor het volledige recept.</p>
     </div>
 
-    <div class="timeline-search">
+    <div class="timeline-controls">
       <input type="search" id="timeline-search" class="timeline-search-input" placeholder="Zoek op naam of ingrediënt…" aria-label="Zoek brouwsels op naam of ingrediënt">
+      <select id="timeline-sort" class="timeline-sort-select" aria-label="Sorteer brouwsels">
+        <option value="oldest">Oudste eerst</option>
+        <option value="newest">Nieuwste eerst</option>
+        <option value="style">Bierstijl</option>
+        <option value="abv-asc">Alcohol % laag-hoog</option>
+        <option value="abv-desc">Alcohol % hoog-laag</option>
+      </select>
     </div>
 
     <div class="timeline-filter" id="timeline-filter" hidden>
