@@ -41,8 +41,8 @@
       </div>
     </div>
     <nav class="tabs" role="tablist" aria-label="Dashboard paginas">
-      <button class="tab-btn active" id="tab-cijfers" role="tab" aria-selected="true" aria-controls="page-cijfers">Cijfers</button>
-      <button class="tab-btn" id="tab-tijdlijn" role="tab" aria-selected="false" aria-controls="page-tijdlijn">Tijdlijn</button>
+      <button class="tab-btn active" id="tab-tijdlijn" role="tab" aria-selected="true" aria-controls="page-tijdlijn">Tijdlijn</button>
+      <button class="tab-btn" id="tab-cijfers" role="tab" aria-selected="false" aria-controls="page-cijfers">Cijfers</button>
     </nav>
   </div>
 </header>
@@ -50,7 +50,7 @@
 <main>
 
   <!-- PAGINA 1: CIJFERS -->
-  <section id="page-cijfers" class="page active" role="tabpanel" aria-labelledby="tab-cijfers">
+  <section id="page-cijfers" class="page" role="tabpanel" aria-labelledby="tab-cijfers" hidden>
 
     <div class="hero hero-cijfers">
       <div class="hero-text">
@@ -148,19 +148,22 @@
   </section>
 
   <!-- PAGINA 2: TIJDLIJN -->
-  <section id="page-tijdlijn" class="page" role="tabpanel" aria-labelledby="tab-tijdlijn" hidden>
+  <section id="page-tijdlijn" class="page active" role="tabpanel" aria-labelledby="tab-tijdlijn">
 
-    <div class="hero hero-small">
-      <p class="hero-eyebrow">— de muur van etiketten —</p>
-      <h1 class="hero-title">Tijdlijn van brouwsels</h1>
-      <p class="hero-sub">Chronologisch, van het eerste flesje tot de laatste batch. Tik op een etiket voor het volledige recept.</p>
+    <div class="hero hero-small hero-tijdlijn">
+      <div class="hero-text">
+        <p class="hero-eyebrow">— de muur van etiketten —</p>
+        <h1 class="hero-title">Tijdlijn van de <span id="tijdlijn-count">--</span> brouwsels</h1>
+        <p class="hero-sub">Chronologisch, van het eerste flesje tot de laatste batch. Tik op een etiket voor het volledige recept.</p>
+      </div>
+      <img src="images/logo-creme.png" alt="Strange Brew logo" class="hero-logo">
     </div>
 
     <div class="timeline-controls">
       <input type="search" id="timeline-search" class="timeline-search-input" placeholder="Zoek op naam of ingrediënt…" aria-label="Zoek brouwsels op naam of ingrediënt">
       <select id="timeline-sort" class="timeline-sort-select" aria-label="Sorteer brouwsels">
+        <option value="newest" selected>Nieuwste eerst</option>
         <option value="oldest">Oudste eerst</option>
-        <option value="newest">Nieuwste eerst</option>
         <option value="style">Bierstijl</option>
         <option value="abv-asc">Alcohol % laag-hoog</option>
         <option value="abv-desc">Alcohol % hoog-laag</option>

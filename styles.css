@@ -131,18 +131,23 @@ main{ max-width:1180px; margin:0 auto; padding:0 24px 80px; position:relative; z
    HERO
    ============================================================ */
 .hero{ padding:56px 0 34px; max-width:720px; }
-.hero-small{ padding:44px 0 28px; }
+.hero-small{ padding:44px 0 28px; max-width:none; }
 .hero-cijfers{
-  max-width:980px;
-  display:flex; align-items:center; justify-content:space-between; gap:40px;
+  max-width:none;
+  display:flex; align-items:flex-start; justify-content:space-between; gap:40px;
+  padding-top:44px;
 }
 .hero-cijfers .hero-text{ flex:1; min-width:0; }
+.hero-tijdlijn{
+  display:flex; align-items:flex-start; justify-content:space-between; gap:40px;
+}
+.hero-tijdlijn .hero-text{ flex:1; min-width:0; }
 .hero-logo{
   height:150px; width:auto; flex-shrink:0;
   filter:drop-shadow(0 12px 30px rgba(238,123,46,0.22));
 }
 @media (max-width:760px){
-  .hero-cijfers{ flex-direction:column; align-items:flex-start; gap:22px; }
+  .hero-cijfers, .hero-tijdlijn{ flex-direction:column; align-items:flex-start; gap:22px; }
   .hero-logo{ height:96px; align-self:center; }
 }
 .hero-eyebrow{
@@ -156,11 +161,12 @@ main{ max-width:1180px; margin:0 auto; padding:0 24px 80px; position:relative; z
   text-transform:uppercase;
 }
 .hero-title span#hero-count,
-.hero-title span#hero-firstyear{
+.hero-title span#hero-firstyear,
+.hero-title span#tijdlijn-count{
   background:linear-gradient(100deg, var(--flame-gold), var(--flame-orange) 50%, var(--flame-red));
   -webkit-background-clip:text; background-clip:text; color:transparent;
 }
-.hero-sub{ margin-top:16px; color:var(--cream-dim); font-size:16px; max-width:56ch; }
+.hero-sub{ margin-top:16px; color:var(--cream-dim); font-size:16px; }
 
 /* ============================================================
    STAT STRIP

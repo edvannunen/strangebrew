@@ -117,8 +117,8 @@ fetch("data.json")
 function initTabs(){
   document.getElementById("tab-cijfers").addEventListener("click", () => showPage("cijfers"));
   document.getElementById("tab-tijdlijn").addEventListener("click", () => showPage("tijdlijn"));
-  window.addEventListener("hashchange", () => showPage(location.hash === "#tijdlijn" ? "tijdlijn" : "cijfers"));
-  showPage(location.hash === "#tijdlijn" ? "tijdlijn" : "cijfers");
+  window.addEventListener("hashchange", () => showPage(location.hash === "#cijfers" ? "cijfers" : "tijdlijn"));
+  showPage(location.hash === "#cijfers" ? "cijfers" : "tijdlijn");
 }
 function showPage(which){
   const tabCijfers = document.getElementById("tab-cijfers");
@@ -132,7 +132,7 @@ function showPage(which){
   tabTijdlijn.setAttribute("aria-selected", !cijfers);
   pageCijfers.hidden = !cijfers;
   pageTijdlijn.hidden = cijfers;
-  const wantHash = cijfers ? "" : "#tijdlijn";
+  const wantHash = cijfers ? "#cijfers" : "";
   if (location.hash !== wantHash){
     history.replaceState(null, "", location.pathname + location.search + wantHash);
   }
@@ -219,6 +219,7 @@ function buildHeroAndStats(){
 
   document.getElementById("hero-count").textContent = RECIPES.length;
   document.getElementById("hero-firstyear").textContent = firstYear;
+  document.getElementById("tijdlijn-count").textContent = RECIPES.length;
 
   const abvVals = RECIPES.map(r=>r.abv).filter(v=>v!=null);
   const sizeVals = RECIPES.map(r=>r.batch_size_l).filter(v=>v!=null);
@@ -585,7 +586,7 @@ function buildEbcScale(){
 /* ============================================================
    TIJDLIJN SORTERING
    ============================================================ */
-let sortOrder = "oldest"; // oldest | newest | style | abv-asc | abv-desc
+let sortOrder = "newest"; // oldest | newest | style | abv-asc | abv-desc
 
 function initSortControl(){
   document.getElementById("timeline-sort").addEventListener("change", (e) => {
