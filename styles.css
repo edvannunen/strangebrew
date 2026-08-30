@@ -518,3 +518,4 @@ button.label-tile{ appearance:none; }
 .footer-sep{ margin:0 8px; opacity:0.5; }
 .footer-link{ color:var(--flame-amber); text-decoration:none; }
 .footer-link:hover{ text-decoration:underline; }
+.footer-copyright{ margin-top:10px; letter-spacing:normal; }
